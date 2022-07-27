@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
   def show
-    @user = current_user
+    if current_user
+      @user = current_user
+    else
+      redirect_to '/'
+      flash[:error] = "Please login to view your dashboard"
+    end
+    
   end
 
   def create
