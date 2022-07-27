@@ -7,7 +7,7 @@ RSpec.describe "Welcome page" do
 
     expect(page).to have_button('Login With Google')
     expect(page).to have_content('Waste No More')
-
+    
   end
 
 end
