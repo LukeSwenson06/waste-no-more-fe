@@ -9,7 +9,15 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <h1>Waste No More</h1>
+
   <body>
+    <% flash.each do |type, msg| %>
+      <div>
+        <h3 style= "color:red">  <%= msg %> </h3>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
