@@ -6,6 +6,11 @@ class UserFacade
     User.new(json)
   end
 
+  def self.create_user(auth_hash)
+    json = UserService.create_user_call(auth_hash)
+    User.new(json)
+  end
+
   def self.user_items(email)
     
   end
