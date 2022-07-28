@@ -44,6 +44,19 @@ RSpec.describe 'User dashboard' do
         expect(page).to_not have_content("Chicken")
       end
     end
+
+    it "displays top 10 recipies" do
+      recipe_json = JSON.parse(File.read('./spec/fixtures/recipe_data.json'), symbolize_names: true) 
+      recipes = recipe_json[:data].map do |recipe_data|
+        Recipe.new(recipe_data)
+      end
+      allow(RecipeFacade).to receive(:find_recipes).and_return(recipes)
+      visit '/dashboard'
+
+      expect(page).to have_content('Buffalo Chicken Wings Wonton Wraps')
+      expect(page).to have_content('How to Make an Easy Chicken Enchilada')
+    end
+    
   end
 
   context 'Sad Path' do
