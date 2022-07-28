@@ -20,20 +20,28 @@ RSpec.describe 'User dashboard' do
     end
 
     it 'displays the items and the days until they expire in expired and expiring sections in the users fridge' do
-      allow(Date).to receive(:today).and_return Date.new(2022, 8, 5)
+      allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
 
       visit '/dashboard'
 
       expect(page).to have_content("Expired Items")
       within "#Expired" do
-        expect(page).to have_content("Chicken expired 3 days ago")
-        expect(page).to_not have_content("Peanut Butter expires in 122 days")
-        expect(page).to_not have_content("Cheese expires in 21 days")
+        expect(page).to have_content("Chicken")
+        expect(page).to have_content("02/08/2022")
+        expect(page).to_not have_content("Peanut Butter")
+        expect(page).to_not have_content("Cheese")
       end
       within "#Expiring" do
-        expect(page).to have_content("Cheese expires in 21 days")
-        expect(page).to have_content("Peanut Butter expires in 122 days")
-        expect(page).to_not have_content("Chicken expired 3 days ago")
+        expect(page).to have_content("Cheese")
+        expect(page).to have_content("26/08/2022")
+        expect(page).to_not have_content("Peanut Butter")
+        expect(page).to_not have_content("Chicken")
+      end
+      within "#Good" do
+        expect(page).to have_content("Peanut Butter")
+        expect(page).to have_content("05/12/2022")
+        expect(page).to_not have_content("Cheese")
+        expect(page).to_not have_content("Chicken")
       end
     end
   end

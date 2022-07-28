@@ -20,8 +20,8 @@ RSpec.describe Item do
     context 'days_to_expired' do
       it 'returns how many days until the item will expire' do 
         item1 = @items.first
-        expect(item1.days_to_expired("26/07/2022")).to eq(132)
-        expect(item1.days_to_expired("06/12/2022")).to eq(-1)
+        expect(item1.days_to_expired("26/07/2022")).to eq(7)
+        expect(item1.days_to_expired("06/12/2022")).to eq(-126)
       end
     end
   end
