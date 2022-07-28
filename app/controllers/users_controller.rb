@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       redirect_to '/'
       flash[:error] = "Please login to view your dashboard"
     end
-    
+
   end
 
   def create

@@ -16,15 +16,17 @@ RSpec.describe 'Add new item to fridge' do
     
         it "submits request to add new item when form is filled out" do
             user = User.new({name: "Tom", email: "Tom@gmail.com"})
+            new_item = Item.new({name: 'Spinach', expiration_date: '10/15/2022'})
             allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+            allow(ItemFacade).to receive(:create_item).and_return(new_item)
 
             visit new_item_path
             fill_in :name, with: 'Spinach'
             fill_in :expiration_date, with: '10/15/2022'
             click_button 'Submit Item'
+
+
             expect(current_path).to  eq('/dashboard')
-            expect(page).to have_content('Spinach') 
-            expect(page).to have_content('10/15/2022') 
         end  
     end
     
