@@ -12,6 +12,10 @@ RSpec.describe 'User dashboard' do
 
       expect(page).to have_content("Hello, #{user.name}! Welcome To Your Fridge")
     end
+
+    xit 'displays the items and the days until they expire in the users fridge' do
+
+    end
   end
 
   context 'Sad Path' do
@@ -19,7 +23,7 @@ RSpec.describe 'User dashboard' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(nil)
       
       visit '/dashboard'
-      
+
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to view your dashboard')
     end

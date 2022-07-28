@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    binding.pry
     auth_hash = request.env['omniauth.auth']
     session[:token] = auth_hash['credentials']['token']
     session[:name] = auth_hash['info']['name']
