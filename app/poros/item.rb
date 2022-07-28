@@ -7,4 +7,8 @@ class Item
     @expiration_date = item_data[:expiration_date]
   end
 
+  def days_to_expired(current_date)
+    (@expiration_date.to_date - current_date.to_date).to_i
+  end
+
 end
