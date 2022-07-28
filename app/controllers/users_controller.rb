@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     if current_user
       @user = current_user
+      @items = UserFacade.user_items(session[:email])
     else
       redirect_to '/'
       flash[:error] = "Please login to view your dashboard"

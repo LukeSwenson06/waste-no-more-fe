@@ -5,4 +5,8 @@ class UserFacade
     User.new(json)
   end
 
+  def self.user_items(email)
+    
+  end
+
 end

@@ -1,1 +1,19 @@
+<center>
 <h3>Hello, <%= @user.name %>! Welcome To Your Fridge</h3>
+<h5>Expired Items</h5>
+<div id='Expired'>
+  <% @items.each do |item| %>
+    <% if item.days_to_expired(Date.today) < 0 %>
+      <p><%= item.name %> expired <%= item.days_to_expired(Date.today).abs %> days ago</p>
+    <% end %>
+  <% end %>
+</div>
+<h5>Expiring Items</h5>
+<div id='Expiring'>
+  <% @items.each do |item| %>
+    <% if item.days_to_expired(Date.today) > 0 %>
+      <p><%= item.name %> expires in <%= item.days_to_expired(Date.today) %> days</p>
+    <% end %>
+  <% end %>
+</div>
+</center>
