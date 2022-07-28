@@ -8,11 +8,9 @@ class UsersController < ApplicationController
       redirect_to '/'
       flash[:error] = "Please login to view your dashboard"
     end
-    
   end
 
   def create
-    binding.pry
     auth_hash = request.env['omniauth.auth']
     session[:token] = auth_hash['credentials']['token']
     session[:name] = auth_hash['info']['name']
