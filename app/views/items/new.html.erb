@@ -1,0 +1,9 @@
+<h2>Add a New Item to Your Fridge</h2>
+
+<%= form_with url: '/items', method: :post, local: true do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+    <%= f.label :expiration_date, "Expiration Date:" %>
+    <%= f.text_field :expiration_date %>
+    <%= f.submit 'Submit Item' %>
+<% end %>
