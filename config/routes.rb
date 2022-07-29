@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#show'
 
   resources :items, only: [:new, :create]
+  resources :recipes, only: [:show]
 end
