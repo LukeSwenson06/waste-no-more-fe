@@ -10,6 +10,11 @@ RSpec.describe 'Add new item to fridge' do
                 Item.new(item_data)
             end
             allow(UserFacade).to receive(:user_items).and_return(items)
+            recipe_json = JSON.parse(File.read('./spec/fixtures/recipe_data.json'), symbolize_names: true) 
+            recipes = recipe_json[:data].map do |recipe_data|
+                Recipe.new(recipe_data)
+            end
+            allow(RecipeFacade).to receive(:find_recipes).and_return(recipes)
         end
         it "has a form to add a new item" do
 
