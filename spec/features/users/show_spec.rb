@@ -19,7 +19,7 @@ RSpec.describe 'User dashboard' do
       end
       allow(RecipeFacade).to receive(:find_recipes).and_return(recipes)
     end
-    it 'displays user name and welcome message' do
+    it 'displays user name and welcome message if the user has an account' do
       visit '/dashboard'
 
       expect(page).to have_content("Hello, #{@user.name}! Welcome To Your Fridge")
@@ -31,6 +31,8 @@ RSpec.describe 'User dashboard' do
       visit '/dashboard'
 
       expect(page).to have_content("Expired Items")
+      expect(page).to have_content("Expiring Items")
+      expect(page).to have_content("Fresh Items")
       within "#Expired" do
         expect(page).to have_content("Chicken")
         expect(page).to have_content("02/08/2022")
@@ -43,7 +45,7 @@ RSpec.describe 'User dashboard' do
         expect(page).to_not have_content("Peanut Butter")
         expect(page).to_not have_content("Chicken")
       end
-      within "#Good" do
+      within "#Fresh" do
         expect(page).to have_content("Peanut Butter")
         expect(page).to have_content("05/12/2022")
         expect(page).to_not have_content("Cheese")
@@ -51,14 +53,25 @@ RSpec.describe 'User dashboard' do
       end
     end
 
-    it "displays top 10 recipies" do
-
+    it "displays recipes informaiton" do
+      recipe_json = JSON.parse(File.read('./spec/fixtures/recipe_data.json'), symbolize_names: true) 
+      recipe = recipe_json[:data].first
       visit '/dashboard'
 
+      expect(page).to have_content('Recipe Suggestions')
       expect(page).to have_content('Buffalo Chicken Wings Wonton Wraps')
+      expect(page).to have_content('Likes: 5')
+      expect(page).to have_content('Fridge Ingredient(s) Count: 3')
+      expect(page).to have_content('Missing Ingredient(s) Count: 2')
+
       expect(page).to have_content('How to Make an Easy Chicken Enchilada')
+      expect(page).to have_content('Likes: 1')
+      expect(page).to have_content('Fridge Ingredient(s) Count: 3')
+      expect(page).to have_content('Missing Ingredient(s) Count: 4')
+
+      click_link 'Buffalo Chicken Wings Wonton Wraps'
+      expect(current_path).to eq("/recipes/#{recipe[:id]}") 
     end
-    
   end
 
   context 'Sad Path' do
@@ -69,6 +82,19 @@ RSpec.describe 'User dashboard' do
 
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to view your dashboard')
+    end
+
+    it 'only displays the welcome message if the user does not have any items' do
+      user = User.new({name: "Bill", email: "Bill@gmail.com"})
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit '/dashboard'
+
+      expect(current_path).to eq('/dashboard')
+      expect(page).to_not have_content("Recipe Suggestions")
+      expect(page).to_not have_content("Expired Items")
+      expect(page).to_not have_content("Expiring Items")
+      expect(page).to_not have_content("Fresh Items")
     end
   end
 
