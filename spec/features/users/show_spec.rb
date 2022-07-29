@@ -51,12 +51,23 @@ RSpec.describe 'User dashboard' do
       end
     end
 
-    it "displays top 10 recipies" do
-
+    it "displays recipes informaiton" do
+      recipe_json = JSON.parse(File.read('./spec/fixtures/recipe_data.json'), symbolize_names: true) 
+      recipe = recipe_json[:data].first
       visit '/dashboard'
 
       expect(page).to have_content('Buffalo Chicken Wings Wonton Wraps')
+      expect(page).to have_content('Likes: 5')
+      expect(page).to have_content('Fridge Ingredient(s) Count: 3')
+      expect(page).to have_content('Missing Ingredient(s) Count: 2')
+
       expect(page).to have_content('How to Make an Easy Chicken Enchilada')
+      expect(page).to have_content('Likes: 1')
+      expect(page).to have_content('Fridge Ingredient(s) Count: 3')
+      expect(page).to have_content('Missing Ingredient(s) Count: 4')
+
+      click_link 'Buffalo Chicken Wings Wonton Wraps'
+      expect(current_path).to eq("/recipes/#{recipe[:id]}") 
     end
     
   end
