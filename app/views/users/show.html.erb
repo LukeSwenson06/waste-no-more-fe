@@ -94,5 +94,9 @@
 
 
 <% @recipes.each do |recipe| %>
-  <p><%= recipe.title %></p>
+  <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
+  <img src="<%= recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
+  <p>Likes: <%= recipe.likes %></p>
+  <p>Fridge Ingredient(s) Count: <%= recipe.used_ingredients %></p>
+  <p>Missing Ingredient(s) Count: <%= recipe.unused_ingredients %></p>
 <% end %>
