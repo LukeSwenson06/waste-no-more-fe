@@ -3,96 +3,98 @@
 <center>
 <h3>Hello, <%= @user.name %>! Welcome To Your Fridge</h3>
 <%= link_to "Add Item", new_item_path %>
-<h5>Expired Items</h5>
-<div id='Expired'>
+<% if @items %>
+  <h5>Expired Items</h5>
+  <div id='Expired'>
+    <ul class="list-group">
+      <div class="container">
+        <div class="row align_items_start">
+          <div class="col">
+            Item
+          </div>
+          <div class="col">
+            Expiration Date
+          </div>
+        </div>
+      </div>
+      <% @items.each do |item| %>
+        <% if item.days_to_expired(Date.today) < 0 %>
+          <div class="container">
+            <div class="row align_items_start">
+              <div class="col">
+                <li class="list-group-item list-group-item-danger"><%= item.name %></li>
+              </div>
+              <div class="col">
+                <li class="list-group-item list-group-item-danger"><%= item.expiration_date %></li>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <h5>Expiring Items</h5>
+  <div id='Expiring'>
   <ul class="list-group">
-    <div class="container">
-      <div class="row align_items_start">
-        <div class="col">
-          Item
-        </div>
-        <div class="col">
-          Expiration Date
-        </div>
-      </div>
-    </div>
-    <% @items.each do |item| %>
-      <% if item.days_to_expired(Date.today) < 0 %>
-        <div class="container">
-          <div class="row align_items_start">
-            <div class="col">
-              <li class="list-group-item list-group-item-danger"><%= item.name %></li>
-            </div>
-            <div class="col">
-              <li class="list-group-item list-group-item-danger"><%= item.expiration_date %></li>
-            </div>
+      <div class="container">
+        <div class="row align_items_start">
+          <div class="col">
+            Item
+          </div>
+          <div class="col">
+            Expiration Date
           </div>
         </div>
-      <% end %>
-    <% end %>
-  </ul>
-</div>
-<h5>Expiring Items</h5>
-<div id='Expiring'>
- <ul class="list-group">
-    <div class="container">
-      <div class="row align_items_start">
-        <div class="col">
-          Item
-        </div>
-        <div class="col">
-          Expiration Date
-        </div>
       </div>
-    </div>
-    <% @items.each do |item| %>
-      <% if (0 < item.days_to_expired(Date.today)) && (item.days_to_expired(Date.today) <= 2) %>
-        <div class="container">
-          <div class="row align_items_start">
-            <div class="col">
-              <li class="list-group-item list-group-item-warning"><%= item.name %></li>
-            </div>
-            <div class="col">
-              <li class="list-group-item list-group-item-warning"><%= item.expiration_date %></li>
+      <% @items.each do |item| %>
+        <% if (0 < item.days_to_expired(Date.today)) && (item.days_to_expired(Date.today) <= 2) %>
+          <div class="container">
+            <div class="row align_items_start">
+              <div class="col">
+                <li class="list-group-item list-group-item-warning"><%= item.name %></li>
+              </div>
+              <div class="col">
+                <li class="list-group-item list-group-item-warning"><%= item.expiration_date %></li>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
-</div>
-<h5>Good Items</h5>
-<div id='Good'>
-  <ul class="list-group">
-    <div class="container">
-      <div class="row align_items_start">
-        <div class="col">
-          Item
-        </div>
-        <div class="col">
-          Expiration Date
-        </div>
-      </div>
-    </div>
-    <% @items.each do |item| %>
-      <% if item.days_to_expired(Date.today) > 2 %>
-        <div class="container">
-          <div class="row align_items_start">
-            <div class="col">
-              <li class="list-group-item list-group-item-success"><%= item.name %></li>
-            </div>
-            <div class="col">
-              <li class="list-group-item list-group-item-success"><%= item.expiration_date %></li>
-            </div>
+    </ul>
+  </div>
+  <h5>Good Items</h5>
+  <div id='Good'>
+    <ul class="list-group">
+      <div class="container">
+        <div class="row align_items_start">
+          <div class="col">
+            Item
+          </div>
+          <div class="col">
+            Expiration Date
           </div>
         </div>
+      </div>
+      <% @items.each do |item| %>
+        <% if item.days_to_expired(Date.today) > 2 %>
+          <div class="container">
+            <div class="row align_items_start">
+              <div class="col">
+                <li class="list-group-item list-group-item-success"><%= item.name %></li>
+              </div>
+              <div class="col">
+                <li class="list-group-item list-group-item-success"><%= item.expiration_date %></li>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
-</div>
-</center>
+    </ul>
+  </div>
 
-
-<% @recipes.each do |recipe| %>
-  <p><%= recipe.title %></p>
+  <h5>Recipe Suggestions</h5>
+  <% @recipes.each do |recipe| %>
+    <p><%= recipe.title %></p>
+  <% end %>
 <% end %>
+</center>
