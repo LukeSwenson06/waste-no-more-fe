@@ -32,7 +32,7 @@ RSpec.describe 'User dashboard' do
 
       expect(page).to have_content("Expired Items")
       expect(page).to have_content("Expiring Items")
-      expect(page).to have_content("Good Items")
+      expect(page).to have_content("Fresh Items")
       within "#Expired" do
         expect(page).to have_content("Chicken")
         expect(page).to have_content("02/08/2022")
@@ -45,7 +45,7 @@ RSpec.describe 'User dashboard' do
         expect(page).to_not have_content("Peanut Butter")
         expect(page).to_not have_content("Chicken")
       end
-      within "#Good" do
+      within "#Fresh" do
         expect(page).to have_content("Peanut Butter")
         expect(page).to have_content("05/12/2022")
         expect(page).to_not have_content("Cheese")
@@ -83,7 +83,7 @@ RSpec.describe 'User dashboard' do
       expect(page).to_not have_content("Recipe Suggestions")
       expect(page).to_not have_content("Expired Items")
       expect(page).to_not have_content("Expiring Items")
-      expect(page).to_not have_content("Good Items")
+      expect(page).to_not have_content("Fresh Items")
     end
   end
 
