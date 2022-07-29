@@ -4,7 +4,9 @@ class UsersController < ApplicationController
     if current_user
       @user = current_user
       @items = UserFacade.user_items(session[:email])
-      @recipes = RecipeFacade.find_recipes(@items)
+      if @items 
+        @recipes = RecipeFacade.find_recipes(@items)
+      end
     else
       redirect_to '/'
       flash[:error] = "Please login to view your dashboard"
