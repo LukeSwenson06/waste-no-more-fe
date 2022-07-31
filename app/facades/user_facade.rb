@@ -12,7 +12,10 @@ class UserFacade
   end
 
   def self.user_items(email)
-    
+    json = UserService.get_user_items(email)
+    items = json[:data].map do |item_data|
+      Item.new(item_data)
+    end
   end
 
 end

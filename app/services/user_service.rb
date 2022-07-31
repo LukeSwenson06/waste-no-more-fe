@@ -12,5 +12,10 @@ class UserService < BaseService
     }.to_json
   end
 
+  def self.get_user_items(email)
+    response = local_connection.get('/api/v1/users/items')
+    json = JSON.parse(response.body, symbolize_names: true)
+  end
+
 
 end
