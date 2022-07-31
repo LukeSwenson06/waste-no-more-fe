@@ -15,6 +15,10 @@ RSpec.describe "Welcome page" do
     })
     user = User.new({name: "Tom", email: "Tom@gmail.com"})
     allow(UserFacade).to receive(:create_user).and_return(user)
+    @user = User.new({name: "Tom", email: "Tom@gmail.com"})
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+
     visit '/'
 
     expect(page).to have_button('Login With Google')
@@ -22,6 +26,8 @@ RSpec.describe "Welcome page" do
     
     click_button("Login With Google")
     expect(current_path).to eq('/dashboard')
+
+    expect(page).to have_content("Hello, #{@user.name}! Welcome To Your Fridge")
     OmniAuth.config.test_mode = false
   end
 
