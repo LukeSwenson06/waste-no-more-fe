@@ -1,0 +1,8 @@
+
+<% @foodbanks.each do |foodbank| %>
+    <div id='foodbank-<%=foodbank.id%>'>
+        <%= foodbank.name %><br>
+        Score: <%= foodbank.rating %><br>
+        <%= link_to "Find out more about this foodbank", "/foodbanks/#{foodbank.id}" %><br>
+    </div>
+<% end %>
