@@ -4,7 +4,7 @@ describe 'resources index page', :vcr do
     it 'makes a api call for food waste articles', :vcr do
         visit '/'
 
-        expect(page).to have_link('Resources')
+        expect(page).to have_button('Resources')
 
         click_on 'Resources'
 
