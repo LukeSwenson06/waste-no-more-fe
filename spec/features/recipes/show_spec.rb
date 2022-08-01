@@ -12,7 +12,7 @@ RSpec.describe 'Recipe Show Page' do
             @recipe = JSON.parse(File.read('./spec/fixtures/recipe_details_data.json'), symbolize_names: true) 
         end
 
-        it "displays all the recipes attributes" do
+        it "displays all the recipes attributes", :vcr do
             visit "/recipes/#{@recipe[:id]}"
             expect(page).to have_content(@recipe[:title]) 
             expect(page).to have_content(@recipe[:summary]) 

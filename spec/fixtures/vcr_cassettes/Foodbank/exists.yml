@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.data.charitynavigator.org/v2/Organizations/742244826?app_id&app_key
+    uri: https://api.data.charitynavigator.org/v2/Organizations?app_id&app_key&causeID=18&pageNum=1&pageSize=25&sort=rating&state=NY
     body:
       encoding: US-ASCII
       string: ''
