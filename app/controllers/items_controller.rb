@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
         # binding.pry
         
         # item = ItemFacade.create_item(current_user.email, item_params)
+        # binding.pry
         if ItemFacade.create_item(current_user.email, item_params)
             redirect_to "/dashboard"
         else
