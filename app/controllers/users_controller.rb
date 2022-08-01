@@ -19,7 +19,8 @@ class UsersController < ApplicationController
     # session[:name] = auth_hash['info']['name']
     session[:email] = auth_hash['info']['email']
     # user = current_user
-    user = UserFacade.create_user(auth_hash)
+    # user = UserFacade.create_user(auth_hash)
+    UserFacade.create_user(auth_hash)
     redirect_to '/dashboard'
   end
   

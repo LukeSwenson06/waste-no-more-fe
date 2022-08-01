@@ -20,6 +20,7 @@ class UserService < BaseService
        email: email
      }
     end
+    json = JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.get_user_items(email)
