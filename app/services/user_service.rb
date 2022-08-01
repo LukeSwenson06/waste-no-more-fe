@@ -11,7 +11,7 @@ class UserService < BaseService
        image: auth_hash['info']['image'],
        token: auth_hash['credentials']['token']
      }
-   end
+    end
   end
 
   def self.find_user_call(email)
@@ -19,7 +19,7 @@ class UserService < BaseService
       req.body = {
        email: email
      }
-   end
+    end
   end
 
   def self.get_user_items(email)
