@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "Welcome page" do
 
   it 'has a link to login which uses OAuth and redirects to user show page once logged in' do
+    OmniAuth.config.silence_get_warning = true
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
       :info => {
