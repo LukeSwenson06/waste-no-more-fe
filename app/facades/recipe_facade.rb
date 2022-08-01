@@ -5,4 +5,10 @@ class RecipeFacade
             Recipe.new(recipe)
         end
     end
+
+    def self.recipe_details(id)
+        json = RecipeService.recipe_details_call(id)
+        RecipeDetails.new(json)    
+    end
+    
 end

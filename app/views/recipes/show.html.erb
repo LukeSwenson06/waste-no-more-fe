@@ -1,0 +1,18 @@
+<h2><%= @recipe.title %></h2>
+<img src="<%= @recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
+<h5>Ready Minutes: <%= @recipe.ready_minutes %></h5>
+<h5>Servigns: <%= @recipe.servings %></h5>
+
+<h3>Dietary Information</h3>
+<h5>Health Score: <%= @recipe.health_score %></h5>
+<h5>Vegetarian: <%= @recipe.vegetarian %></h5>
+<h5>Vegan: <%= @recipe.vegan %></h5>
+<h5>Gluten Free: <%= @recipe.gluten_free %></h5>
+<h5>Dairy Free: <%= @recipe.dairy_free %></h5>
+
+<p><%= @recipe.summary %></p>
+<h6>Wine Pairings</h6>
+<% @recipe.wine_pairings.each do |wine| %>
+    <p><%= wine %></p>
+<% end %>
+<a href="<%= "#{@recipe.url}" %>">Recipe Instructions</a>

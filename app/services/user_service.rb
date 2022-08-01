@@ -1,11 +1,10 @@
 class UserService < BaseService
 
   # def self.find_or_create_user(email, name)
-  #   response = connection.get('/api/v1/user')
+  #   response = local_connection.get('/api/v1/user')
   # end
   def self.create_user_call(auth_hash)
-    binding.pry
-    response = connection.post('/api/v1/users'), {
+    response = local_connection.post('/api/v1/users'), {
       name: auth_hash['info']['email'],
       email: auth_hash['info']['name'],
       image: auth_hash['info']['image'],

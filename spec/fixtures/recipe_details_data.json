@@ -1,0 +1,382 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "lowFodmap": false,
+    "weightWatcherSmartPoints": 1,
+    "gaps": "no",
+    "preparationMinutes": -1,
+    "cookingMinutes": -1,
+    "aggregateLikes": 5,
+    "healthScore": 0,
+    "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+    "license": "CC BY 3.0",
+    "sourceName": "Foodista",
+    "pricePerServing": 13.02,
+    "extendedIngredients": [
+        {
+            "id": 5006,
+            "aisle": "Meat",
+            "image": "whole-chicken.jpg",
+            "consistency": "SOLID",
+            "name": "chicken",
+            "nameClean": "whole chicken",
+            "original": "4 ounces-weight chicken, cooked, diced small",
+            "originalName": "weight chicken, cooked, diced small",
+            "amount": 4.0,
+            "unit": "ounces",
+            "meta": [
+                "diced",
+                "cooked"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 4.0,
+                    "unitShort": "oz",
+                    "unitLong": "ounces"
+                },
+                "metric": {
+                    "amount": 113.398,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 1017,
+            "aisle": "Cheese",
+            "image": "cream-cheese.jpg",
+            "consistency": "SOLID",
+            "name": "cream cheese",
+            "nameClean": "cream cheese",
+            "original": "1 ounces-weight fat free cream cheese",
+            "originalName": "weight fat free cream cheese",
+            "amount": 1.0,
+            "unit": "ounces",
+            "meta": [
+                "fat free"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "oz",
+                    "unitLong": "ounce"
+                },
+                "metric": {
+                    "amount": 28.35,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 1009,
+            "aisle": "Cheese",
+            "image": "cheddar-cheese.png",
+            "consistency": "SOLID",
+            "name": "cheddar cheese",
+            "nameClean": "cheddar cheese",
+            "original": "1 ounces-weight low fat cheddar cheese",
+            "originalName": "weight low fat cheddar cheese",
+            "amount": 1.0,
+            "unit": "ounces",
+            "meta": [
+                "low fat"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "oz",
+                    "unitLong": "ounce"
+                },
+                "metric": {
+                    "amount": 28.35,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 6168,
+            "aisle": "Condiments",
+            "image": "hot-sauce-or-tabasco.png",
+            "consistency": "LIQUID",
+            "name": "hot sauce",
+            "nameClean": "hot sauce",
+            "original": "1/4 cups Franks Hot Sauce or hot sauce",
+            "originalName": "Franks Hot Sauce or hot sauce",
+            "amount": 0.25,
+            "unit": "cups",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 10018368,
+            "aisle": "Ethnic Foods",
+            "image": "wonton-wrappers.jpg",
+            "consistency": "SOLID",
+            "name": "wonton wrappers",
+            "nameClean": "wonton wrappers",
+            "original": "20 whole wonton wrappers",
+            "originalName": "whole wonton wrappers",
+            "amount": 20.0,
+            "unit": "",
+            "meta": [
+                "whole"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 20.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 20.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        }
+    ],
+    "id": 636411,
+    "title": "Buffalo Chicken Wings Wonton Wraps",
+    "readyInMinutes": 45,
+    "servings": 20,
+    "sourceUrl": "https://www.foodista.com/recipe/6LDTLRRB/buffalo-chicken-wings-wonton-wraps",
+    "image": "https://spoonacular.com/recipeImages/636411-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Buffalo Chicken Wings Wonton Wraps might be just the hor d'oeuvre you are searching for. One portion of this dish contains roughly <b>2g of protein</b>, <b>1g of fat</b>, and a total of <b>39 calories</b>. This recipe serves 20 and costs 13 cents per serving. 5 people have tried and liked this recipe. It is perfect for <b>The Super Bowl</b>. Head to the store and pick up wonton wrappers, hot sauce, weight cheddar cheese, and a few other things to make it today. Not a lot of people really liked this Chinese dish. It is brought to you by Foodista. From preparation to the plate, this recipe takes around <b>around 45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 7%</b>. This score is very bad (but still fixable). Similar recipes include <a href=\"https://spoonacular.com/recipes/skinny-buffalo-chicken-wonton-cups-629647\">Skinny Buffalo Chicken Wonton Cups</a>, <a href=\"https://spoonacular.com/recipes/veggie-pizza-and-buffalo-chicken-salad-wonton-cup-appetizers-511906\">Veggie Pizzan and Buffalo Chicken Salad Wonton Cup Appetizers</a>, and <a href=\"https://spoonacular.com/recipes/buffalo-chicken-wings-165207\">Buffalo Chicken Wings</a>.",
+    "cuisines": [
+        "Chinese",
+        "Asian"
+    ],
+    "dishTypes": [
+        "antipasti",
+        "starter",
+        "snack",
+        "appetizer",
+        "antipasto",
+        "hor d'oeuvre"
+    ],
+    "diets": [],
+    "occasions": [
+        "super bowl"
+    ],
+    "winePairing": {
+        "pairedWines": [
+            "sparkling rose",
+            "sparkling wine"
+        ],
+        "pairingText": "Sparkling rosé and Sparkling Wine are my top picks for Wontons. If you're serving a selection of appetizers, you can't go wrong with these. Both are very food friendly and complement a variety of flavors. The Conundrum Sparkling rosé with a 4.7 out of 5 star rating seems like a good match. It costs about 28 dollars per bottle.",
+        "productMatches": [
+            {
+                "id": 481684,
+                "title": "Conundrum Sparkling Rose",
+                "description": "A luminous rose gold hue with warming peach undertones, this wine opens with bright scents of strawberry, barely ripe peach, fresh wildflowers and hard candy. Its flavors mirror its aromas, with additional notes of watermelon and a hint of banana. Entry features a pop of vibrant acidity, which evolves into a soft roundness. The taste of guava and mango add a tropical twist to the long, enticing finish.",
+                "price": "$27.99",
+                "imageUrl": "https://spoonacular.com/productImages/481684-312x231.jpg",
+                "averageRating": 0.9400000000000001,
+                "ratingCount": 10.0,
+                "score": 0.907741935483871,
+                "link": "https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fconundrum-sparkling-rose-2017%2F529982"
+            }
+        ]
+    },
+    "instructions": "Preheat oven to 350 degrees\nLine a baking sheet with parchment paper.\nCut your chicken into tiny pieces, as small as you can get it.\nIn a medium bowl add chicken, cream cheese, cheddar cheese and hot sauce. Mix together until well blended.\nIn a tiny bowl, add some water. This is for sealing the edges of your wontons.\nPlace 1 1/2 tsp. of mixture in won-ton wrapper, take your finger and dip in water and place along the edges of the wrapper (this will be the glue to seal the wrappers together). Fold wrapper over into triangle place on baking sheet, Do the same for the rest of the wrappers. Bake in over for 15 minutes, until lightly brown.\nServe with Light Blue Cheese or Ranch Dressing on the side.",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Preheat oven to 350 degrees",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "Line a baking sheet with parchment paper.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404770,
+                            "name": "baking paper",
+                            "localizedName": "baking paper",
+                            "image": "baking-paper.jpg"
+                        },
+                        {
+                            "id": 404727,
+                            "name": "baking sheet",
+                            "localizedName": "baking sheet",
+                            "image": "baking-sheet.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "step": "Cut your chicken into tiny pieces, as small as you can get it.",
+                    "ingredients": [
+                        {
+                            "id": 5006,
+                            "name": "whole chicken",
+                            "localizedName": "whole chicken",
+                            "image": "whole-chicken.jpg"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 4,
+                    "step": "In a medium bowl add chicken, cream cheese, cheddar cheese and hot sauce.",
+                    "ingredients": [
+                        {
+                            "id": 1009,
+                            "name": "cheddar cheese",
+                            "localizedName": "cheddar cheese",
+                            "image": "cheddar-cheese.png"
+                        },
+                        {
+                            "id": 1017,
+                            "name": "cream cheese",
+                            "localizedName": "cream cheese",
+                            "image": "cream-cheese.jpg"
+                        },
+                        {
+                            "id": 6168,
+                            "name": "hot sauce",
+                            "localizedName": "hot sauce",
+                            "image": "hot-sauce-or-tabasco.png"
+                        },
+                        {
+                            "id": 5006,
+                            "name": "whole chicken",
+                            "localizedName": "whole chicken",
+                            "image": "whole-chicken.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404783,
+                            "name": "bowl",
+                            "localizedName": "bowl",
+                            "image": "bowl.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "step": "Mix together until well blended.",
+                    "ingredients": [],
+                    "equipment": []
+                },
+                {
+                    "number": 6,
+                    "step": "In a tiny bowl, add some water. This is for sealing the edges of your wontons.",
+                    "ingredients": [
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "localizedName": "water",
+                            "image": "water.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404783,
+                            "name": "bowl",
+                            "localizedName": "bowl",
+                            "image": "bowl.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "step": "Place 1 1/2 tsp. of mixture in won-ton wrapper, take your finger and dip in water and place along the edges of the wrapper (this will be the glue to seal the wrappers together). Fold wrapper over into triangle place on baking sheet, Do the same for the rest of the wrappers.",
+                    "ingredients": [
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "localizedName": "water",
+                            "image": "water.png"
+                        },
+                        {
+                            "id": 0,
+                            "name": "dip",
+                            "localizedName": "dip",
+                            "image": ""
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404727,
+                            "name": "baking sheet",
+                            "localizedName": "baking sheet",
+                            "image": "baking-sheet.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "step": "Bake in over for 15 minutes, until lightly brown.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 15,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 9,
+                    "step": "Serve with Light Blue Cheese or Ranch Dressing on the side.",
+                    "ingredients": [
+                        {
+                            "id": 4639,
+                            "name": "ranch dressing",
+                            "localizedName": "ranch dressing",
+                            "image": "ranch-dressing.jpg"
+                        },
+                        {
+                            "id": 1004,
+                            "name": "blue cheese",
+                            "localizedName": "blue cheese",
+                            "image": "blue-cheese.png"
+                        }
+                    ],
+                    "equipment": []
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/buffalo-chicken-wings-wonton-wraps-636411"
+}
