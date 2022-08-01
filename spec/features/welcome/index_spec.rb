@@ -18,7 +18,7 @@ RSpec.describe "Welcome page" do
     allow(UserFacade).to receive(:create_user).and_return(user)
     @user = User.new({name: "Tom", email: "Tom@gmail.com"})
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-    allow(UserFacade).to receive(:user_items).and_return(nil)
+    allow(UserFacade).to receive(:user_items).and_return([])
 
 
     visit '/'

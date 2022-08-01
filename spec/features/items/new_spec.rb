@@ -27,7 +27,7 @@ RSpec.describe 'Add new item to fridge' do
         end
     
         it "submits request to add new item when form is filled out" do
-            new_item = Item.new({name: 'Spinach', expiration_date: '10/15/2022'})
+            new_item = Item.new({name: 'Spinach', expiration: '10/15/2022'})
             allow(ItemFacade).to receive(:create_item).and_return(new_item)
 
             visit new_item_path
