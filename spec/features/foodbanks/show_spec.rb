@@ -7,7 +7,7 @@ describe 'Food Bank Show API call', :vcr do
         expect(current_path).to eq('/foodbanks/742244826')
         
         within '#information' do
-            expect(page).to have_content("http://www.weldfoodbank.org/")
+            expect(page).to have_link("http://www.weldfoodbank.org/")
             expect(page).to have_content('Weld Food Bank')
             expect(page).to have_content("Weld Food Bank's (WFB) mission is to lead and engage our community in the fight against hunger.")
             expect(page).to have_content("Turning the tables on hunger.")
