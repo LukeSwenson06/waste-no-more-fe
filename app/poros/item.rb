@@ -3,7 +3,6 @@ class Item
   attr_reader :name, :expiration_date
 
   def initialize(item_data)
-    # binding.pry
     @name = item_data[:name]
     @expiration_date = item_data[:expiration]
   end
