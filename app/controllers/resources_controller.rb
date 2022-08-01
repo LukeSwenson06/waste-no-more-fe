@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController 
 
     def index
-        @articles = ArticleService.get_articles
+        @articles = ArticleFacade.get_articles
     end
 
 end
