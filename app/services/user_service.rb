@@ -11,7 +11,24 @@ class UserService < BaseService
        image: auth_hash['info']['image'],
        token: auth_hash['credentials']['token']
      }
-   end
+    end
+  end
+
+  def self.find_user_call(email)
+    response = local_connection.get('/api/v1/users') do |req|
+      req.body = {
+       email: email
+     }
+    end
+  end
+
+  def self.get_user_items(email)
+    response = local_connection.get('/api/v1/users/items') do |req|
+      req.body = {
+        email: email
+      }
+    end
+    json = JSON.parse(response.body, symbolize_names: true)
   end
 
 
