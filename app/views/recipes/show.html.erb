@@ -12,7 +12,11 @@
 
 <p><%= @recipe.summary %></p>
 <h6>Wine Pairings</h6>
-<% @recipe.wine_pairings.each do |wine| %>
-    <p><%= wine %></p>
+<% if @recipe.wine_pairings != nil %>
+  <% @recipe.wine_pairings.each do |wine| %>
+      <p><%= wine %></p>
+  <% end %>
+<% else %>
+There are no wine pairings for this recipe
 <% end %>
 <a href="<%= "#{@recipe.url}" %>">Recipe Instructions</a>

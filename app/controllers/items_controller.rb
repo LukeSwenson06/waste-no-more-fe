@@ -4,8 +4,7 @@ class ItemsController < ApplicationController
     end
     
     def create
-        item = ItemFacade.create_item(current_user.email, item_params)
-        if item.instance_of?(Item)
+        if ItemFacade.create_item(current_user.email, item_params)
             redirect_to "/dashboard"
         else
             redirect_to new_item_path

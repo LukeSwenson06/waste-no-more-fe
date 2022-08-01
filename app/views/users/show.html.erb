@@ -3,7 +3,7 @@
 <center>
 <h3>Hello, <%= @user.name %>! Welcome To Your Fridge</h3>
 <%= link_to "Add Item", new_item_path %>
-<% if @items %>
+<% if @items != [] %>
   <h5>Expired Items</h5>
   <div id='Expired'>
     <ul class="list-group">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <% @items.each do |item| %>
-        <% if item.days_to_expired(Date.today) < 0 %>
+        <% if item.days_to_expired(Date.today) <= 0 %>
           <div class="container">
             <div class="row align_items_start">
               <div class="col">
