@@ -5,7 +5,13 @@ class RecipeService < BaseService
     #     ingredients = food.map do |f|
     #   f.name
     # end.join(',')
-        response = spoonacular_connection.get("/recipes/findByIngredients?ingredients=#{ingredients}") do |faraday|
+        ingredients_array = []
+        ingredients.each do |ing|
+            ingredients_array << ing.name
+        end
+        string = ingredients_array.join(",")
+        binding.pry
+        response = spoonacular_connection.get("/recipes/findByIngredients?ingredients=#{string}") do |faraday|
             faraday.params['number'] = 10
             faraday.params['apiKey'] = ENV['recipe_api_key']
         end

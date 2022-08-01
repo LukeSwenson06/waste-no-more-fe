@@ -16,7 +16,8 @@ class UserFacade
     json = UserService.get_user_items(email)
     if json[:data]
       items = json[:data].map do |item_data|
-        Item.new(item_data)
+        # binding.pry
+        Item.new(item_data[:attributes])
       end
     else
       items = nil
