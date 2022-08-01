@@ -2,7 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeService' do
   it "can retrieve data and parses response for ingredients connection", :vcr do
-    parsed_json = RecipeService.find_recipes_call('milk,+eggs')
+    json = JSON.parse(File.read('./spec/fixtures/items_data.json'), symbolize_names: true) 
+    ingredients = json[:data].map do |item_data|
+      Item.new(item_data)
+    end
+    parsed_json = RecipeService.find_recipes_call(ingredients)
 
     expect(parsed_json).to be_a Array
     recipe = parsed_json.first

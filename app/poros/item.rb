@@ -4,7 +4,7 @@ class Item
 
   def initialize(item_data)
     @name = item_data[:name]
-    @expiration_date = item_data[:expiration_date]
+    @expiration_date = item_data[:expiration]
   end
 
   def days_to_expired(current_date)
