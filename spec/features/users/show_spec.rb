@@ -87,7 +87,8 @@ RSpec.describe 'User dashboard' do
     it 'only displays the welcome message if the user does not have any items' do
       user = User.new({name: "Bill", email: "Bill@gmail.com"})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
+      allow(UserFacade).to receive(:user_items).and_return(nil)
+      
       visit '/dashboard'
 
       expect(current_path).to eq('/dashboard')
