@@ -53,7 +53,7 @@ RSpec.describe 'User dashboard' do
       end
     end
 
-    it "displays recipes informaiton" do
+    it "displays recipes informaiton", :vcr do
       recipe_json = JSON.parse(File.read('./spec/fixtures/recipe_data.json'), symbolize_names: true) 
       recipe = recipe_json[:data].first
       visit '/dashboard'
