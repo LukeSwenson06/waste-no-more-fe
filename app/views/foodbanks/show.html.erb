@@ -1,0 +1,26 @@
+<div id='information'>
+    <div>
+        <p><%= @foodbank.name %></p><br><br>
+    </div>
+
+    <div>
+        <p>Score: <%= @foodbank.rating %></p><br>
+    </div>
+
+    <div>
+        <p><%= @foodbank.snippet %></p><br>
+    </div>
+
+    <div>
+        <p><%= @foodbank.mission %></p><br>
+    </div>
+
+    <div>
+        <p>Score: <%= link_to "#{@foodbank.link}", "#{@foodbank.link}"%></p><br>
+    </div>
+
+    <div>
+        <p>Address: <%= @foodbank.city %>, <%= @foodbank.state %>, <%= @foodbank.street %>, <%= @foodbank.postalcode %></p><br>
+    </div>
+</div>
+
