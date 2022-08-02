@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   get '/dashboard', to: 'users#show'
+  delete '/users', to: 'users#destroy'
 
   resources :items, only: [:new, :create]
   
