@@ -6,7 +6,7 @@
 <% if @items != [] %>
   <h5>Expired Items</h5>
   <div id='Expired'>
-    <ul class="list-group">
+    <ul class="list-group  list-group-flush list-group-flush">
       <div class="container">
         <div class="row align_items_start">
           <div class="col">
@@ -14,6 +14,9 @@
           </div>
           <div class="col">
             Expiration Date
+          </div>
+          <div class="col">
+            
           </div>
         </div>
       </div>
@@ -27,6 +30,9 @@
               <div class="col">
                 <li class="list-group-item list-group-item-danger"><%= item.expiration_date %></li>
               </div>
+              <div class="col">
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete, params: {q: 'top rated'} %></li>
+              </div>
             </div>
           </div>
         <% end %>
@@ -35,7 +41,7 @@
   </div>
   <h5>Expiring Items (Expire within 2 days)</h5>
   <div id='Expiring'>
-  <ul class="list-group">
+  <ul class="list-group list-group-flush list-group-flush">
       <div class="container">
         <div class="row align_items_start">
           <div class="col">
@@ -43,6 +49,9 @@
           </div>
           <div class="col">
             Expiration Date
+          </div>
+          <div class="col">
+            
           </div>
         </div>
       </div>
@@ -56,6 +65,9 @@
               <div class="col">
                 <li class="list-group-item list-group-item-warning"><%= item.expiration_date %></li>
               </div>
+              <div class="col">
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete %></li>
+              </div>
             </div>
           </div>
         <% end %>
@@ -64,7 +76,7 @@
   </div>
   <h5>Fresh Items</h5>
   <div id='Fresh'>
-    <ul class="list-group">
+    <ul class="list-group list-group-flush">
       <div class="container">
         <div class="row align_items_start">
           <div class="col">
@@ -72,6 +84,9 @@
           </div>
           <div class="col">
             Expiration Date
+          </div>
+          <div class="col">
+            
           </div>
         </div>
       </div>
@@ -84,6 +99,9 @@
               </div>
               <div class="col">
                 <li class="list-group-item list-group-item-success"><%= item.expiration_date %></li>
+              </div>
+              <div class="col">
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete %></li>
               </div>
             </div>
           </div>
