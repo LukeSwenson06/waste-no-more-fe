@@ -6,4 +6,8 @@ class ItemService < BaseService
             }
         end
     end
+
+    def self.delete_item_call(id)
+        response = local_connection.delete("/api/v1/items/#{id}")
+    end
 end
