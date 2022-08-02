@@ -73,19 +73,17 @@ RSpec.describe 'User dashboard' do
       expect(current_path).to eq("/recipes/#{recipe[:id]}") 
     end
 
-    it 'has buttons to delete an item' do
+    it 'has buttons to delete an item and redirects to dashboard after deletion', :vcr do
       allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
       visit '/dashboard'
-save_and_open_page
       within "#Expiring" do
         expect(page).to have_content("Cheese")
         expect(page).to have_content("26/08/2022")
         expect(page).to have_button("Delete Item")
         click_button("Delete Item")
       end
-
+    
       expect(current_path).to eq('/dashboard')
-      expect(page).to_not have_content("Cheese")
     end
   end
 

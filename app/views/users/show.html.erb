@@ -31,7 +31,7 @@
                 <li class="list-group-item list-group-item-danger"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete, params: {q: 'top rated'} %></li>
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete, params: {id: item.id} %></li>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
                 <li class="list-group-item list-group-item-warning"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete %></li>
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete, params: {id: item.id}  %></li>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@
                 <li class="list-group-item list-group-item-success"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete %></li>
+                <li class="list-group-item"> <%= button_to "Delete Item", '/items', method: :delete, params: {id: item.id}  %></li>
               </div>
             </div>
           </div>

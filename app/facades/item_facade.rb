@@ -8,4 +8,8 @@ class ItemFacade
             Item.new(json[:data][:attributes])
         end
     end
+
+    def self.delete_item(id)
+        ItemService.delete_item_call(id)
+    end
 end

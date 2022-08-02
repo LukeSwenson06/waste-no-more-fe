@@ -13,7 +13,8 @@ class ItemsController < ApplicationController
     end
 
     def destroy
-        # binding.pry
+        ItemFacade.delete_item(params[:id])
+        redirect_to '/dashboard'
     end
 
     private
