@@ -16,7 +16,13 @@
             Expiration Date
           </div>
           <div class="col">
-            
+            <% expired_items_ids = [] %>
+              <% @items.each do |item| %>
+                <% if item.days_to_expired(Date.today) <= 0 %>
+                  <% expired_items_ids << item.id %>
+                <% end %>
+              <% end %>
+            <%= button_to "Delete All Expired Items", '/items', method: :delete, params: {items_ids: expired_items_ids} %>         
           </div>
         </div>
       </div>

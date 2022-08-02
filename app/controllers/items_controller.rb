@@ -13,7 +13,13 @@ class ItemsController < ApplicationController
     end
 
     def destroy
-        ItemFacade.delete_item(params[:id])
+        if params[:items_ids]
+            params[:items_ids].each do |id| 
+                ItemFacade.delete_item(id)
+            end
+        else
+            ItemFacade.delete_item(params[:id])
+        end
         redirect_to '/dashboard'
     end
 

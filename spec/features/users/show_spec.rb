@@ -85,6 +85,22 @@ RSpec.describe 'User dashboard' do
     
       expect(current_path).to eq('/dashboard')
     end
+
+    it 'has a delete all exired items button', :vcr do
+      allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
+      visit '/dashboard'
+      
+      expect(page).to have_button("Delete All Expired Items")
+      within "#Expired" do
+        expect(page).to have_content("Chicken")
+        expect(page).to have_content("02/08/2022")
+        expect(page).to have_content("Beef")
+        expect(page).to have_content("02/08/2022")
+      end
+      click_button("Delete All Expired Items")
+    
+      expect(current_path).to eq('/dashboard')
+    end
   end
 
   context 'Sad Path' do
