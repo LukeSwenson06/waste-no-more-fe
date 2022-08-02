@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   get '/dashboard', to: 'users#show'
+  delete '/users', to: 'users#destroy'
 
   delete '/items', to: 'items#destroy'
 
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   get '/foodbanks/:id', to: 'foodbanks#show'
 
   get '/foodbanks/search', to:'foodbanks#search'
+
+  get '/resources', to: 'resources#index'
 
   resources :recipes, only: [:show]
 end
