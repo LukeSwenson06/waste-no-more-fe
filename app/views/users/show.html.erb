@@ -124,13 +124,23 @@
     </ul>
   </div>
   <h1>Recipe Suggestions</h1>
-  <% @recipes.each do |recipe| %>
-    <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
-    <img src="<%= recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
-    <p>Likes: <%= recipe.likes %></p>
-    <p>Fridge Ingredient(s) Count: <%= recipe.used_ingredients %></p>
-    <p>Missing Ingredient(s) Count: <%= recipe.unused_ingredients %></p>
-  <% end %>
-
+  <div class="container">
+    <div class="row align_items_start">
+      <% col_num = 0 %>
+      <div class="grid">
+        <div class="row justify-content-start">
+        <% @recipes.each do |recipe| %>
+          <div class="g-col-6">
+            <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
+            <img src="<%= recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
+            <p>Likes: <%= recipe.likes %></p>
+            <p>Fridge Ingredient(s) Count: <%= recipe.used_ingredients %></p>
+            <p>Missing Ingredient(s) Count: <%= recipe.unused_ingredients %></p>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
 </center>
