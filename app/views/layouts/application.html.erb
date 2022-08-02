@@ -9,11 +9,28 @@
     <%= javascript_include_tag 'application' %>
   </head>
   
-<center>
-  <h1>Waste No More</h1>
-</center>
+
 
   <body>
+    <nav>
+      <img src="" alt="">
+
+      <ul class="links">
+        <% if current_user %>
+          <li class="nav-link" id="right_links"><%= link_to "Log Out", users_path, method: :delete %></li>
+          <li class="nav-link" id="left_links"><%= link_to "Home", "/dashboard" %></li>
+        <% else %>
+          <li class="nav-link" id="right_links"><%= link_to "Log In", '/auth/google_oauth2/callback' %></li>
+        <% end %>
+        <li class="nav-link" id="left_links"><%= link_to "Resources", '/resources' %></li>
+        <li class="nav-link" id="left_links"><%= link_to "Foodbanks", '/foodbanks' %></li>
+      </ul>
+    </nav>
+
+    <center>
+      <h1>Waste No More</h1>
+    </center>
+
     <% flash.each do |type, msg| %>
       <div>
         <h3 style= "color:red">  <%= msg %> </h3>
