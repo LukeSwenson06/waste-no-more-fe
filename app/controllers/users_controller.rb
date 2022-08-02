@@ -20,5 +20,11 @@ class UsersController < ApplicationController
     UserFacade.create_user(auth_hash)
     redirect_to '/dashboard'
   end
+
+  def destroy
+    session.destroy
+    redirect_to '/'
+  end
+  
   
 end
