@@ -1,0 +1,347 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "lowFodmap": false,
+    "weightWatcherSmartPoints": 13,
+    "gaps": "no",
+    "preparationMinutes": -1,
+    "cookingMinutes": -1,
+    "aggregateLikes": 1,
+    "healthScore": 3,
+    "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+    "license": "CC BY 3.0",
+    "sourceName": "Foodista",
+    "pricePerServing": 155.84,
+    "extendedIngredients": [
+        {
+            "id": 18239,
+            "aisle": "Bakery/Bread",
+            "image": "croissants.jpg",
+            "consistency": "SOLID",
+            "name": "croissant",
+            "nameClean": "croissant",
+            "original": "1 croissant",
+            "originalName": "croissant",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 13346,
+            "aisle": "Meat",
+            "image": "corned-beef.png",
+            "consistency": "SOLID",
+            "name": "corned beef",
+            "nameClean": "corned beef",
+            "original": "1/4 cup canned corned beef hash",
+            "originalName": "canned corned beef hash",
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [
+                "canned"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1123,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg.png",
+            "consistency": "SOLID",
+            "name": "egg",
+            "nameClean": "egg",
+            "original": "1 egg",
+            "originalName": "egg",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 1001,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "SOLID",
+            "name": "butter",
+            "nameClean": "butter",
+            "original": "1/2 teaspoon butter",
+            "originalName": "butter",
+            "amount": 0.5,
+            "unit": "teaspoon",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 0.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 1082047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "SOLID",
+            "name": "kosher salt",
+            "nameClean": "kosher salt",
+            "original": "Kosher salt and freshly ground black pepper",
+            "originalName": "Kosher salt and freshly ground black pepper",
+            "amount": 1.0,
+            "unit": "serving",
+            "meta": [
+                "black",
+                "freshly ground"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "serving",
+                    "unitLong": "serving"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "serving",
+                    "unitLong": "serving"
+                }
+            }
+        }
+    ],
+    "id": 658134,
+    "title": "Redneck Breakfast on a Croissant",
+    "readyInMinutes": 45,
+    "servings": 1,
+    "sourceUrl": "https://www.foodista.com/recipe/T58SBZQ4/redneck-breakfast-on-a-croissant",
+    "image": "https://spoonacular.com/recipeImages/658134-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Redneck Breakfast on a Croissant takes roughly <b>about 45 minutes</b> from beginning to end. This breakfast has <b>368 calories</b>, <b>14g of protein</b>, and <b>22g of fat</b> per serving. This recipe serves 1. For <b>$1.56 per serving</b>, this recipe <b>covers 12%</b> of your daily requirements of vitamins and minerals. 1 person were glad they tried this recipe. It is brought to you by Foodista. Head to the store and pick up kosher salt and pepper, corned beef hash, butter, and a few other things to make it today. With a spoonacular <b>score of 27%</b>, this dish is not so amazing. Similar recipes are <a href=\"https://spoonacular.com/recipes/holiday-breakfast-ham-and-cheese-croissant-breakfast-casserole-746478\">Holiday Breakfast: Ham-and-Cheese Croissant Breakfast Casserole</a>, <a href=\"https://spoonacular.com/recipes/croissant-breakfast-sandwich-23351\">Croissant Breakfast Sandwich</a>, and <a href=\"https://spoonacular.com/recipes/croissant-breakfast-casserole-409683\">Croissant Breakfast Casserole</a>.",
+    "cuisines": [],
+    "dishTypes": [
+        "morning meal",
+        "brunch",
+        "breakfast"
+    ],
+    "diets": [],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "Split the croissant in half and toast.  Heat a non stick pan over medium high heat, add the corned beef hash.  Cook the has until it is brown and crisp on one side (3 to 5 minutes), then flip with a turner and cook the other side until it is crisps and browns, another 3 to 5 minutes.  Note: While cooking the has push it together and flatten it so it makes a little patty, its much easier to flip and serve that way.  Place the corned beef hash patty on the bottom half of the toasted croissant.\nIn the same pan, melt the butter and add the egg, fry according to taste.  Sprinkle the egg with a little salt and pepper and place on top of the corned beef hash patty.  On the top side of the croissant, squeeze a layer of canned cheese over it.  Place the top layer over the bottom half.  Serve immediately.",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Split the croissant in half and toast.",
+                    "ingredients": [
+                        {
+                            "id": 18239,
+                            "name": "croissant",
+                            "localizedName": "croissant",
+                            "image": "croissants.jpg"
+                        },
+                        {
+                            "id": 18070,
+                            "name": "toast",
+                            "localizedName": "toast",
+                            "image": "toast"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 2,
+                    "step": "Heat a non stick pan over medium high heat, add the corned beef hash.  Cook the has until it is brown and crisp on one side (3 to 5 minutes), then flip with a turner and cook the other side until it is crisps and browns, another 3 to 5 minutes.  Note: While cooking the has push it together and flatten it so it makes a little patty, its much easier to flip and serve that way.",
+                    "ingredients": [
+                        {
+                            "id": 13346,
+                            "name": "corned beef",
+                            "localizedName": "corned beef",
+                            "image": "corned-beef.png"
+                        },
+                        {
+                            "id": 0,
+                            "name": "chips",
+                            "localizedName": "chips",
+                            "image": ""
+                        },
+                        {
+                            "id": 11390,
+                            "name": "hash browns",
+                            "localizedName": "hash browns",
+                            "image": "hash-brown-potatoes.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404642,
+                            "name": "spatula",
+                            "localizedName": "spatula",
+                            "image": "spatula-or-turner.jpg"
+                        },
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ],
+                    "length": {
+                        "number": 6,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 3,
+                    "step": "Place the corned beef hash patty on the bottom half of the toasted croissant.",
+                    "ingredients": [
+                        {
+                            "id": 13346,
+                            "name": "corned beef",
+                            "localizedName": "corned beef",
+                            "image": "corned-beef.png"
+                        },
+                        {
+                            "id": 18239,
+                            "name": "croissant",
+                            "localizedName": "croissant",
+                            "image": "croissants.jpg"
+                        },
+                        {
+                            "id": 11390,
+                            "name": "hash browns",
+                            "localizedName": "hash browns",
+                            "image": "hash-brown-potatoes.png"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 4,
+                    "step": "In the same pan, melt the butter and add the egg, fry according to taste.",
+                    "ingredients": [
+                        {
+                            "id": 1001,
+                            "name": "butter",
+                            "localizedName": "butter",
+                            "image": "butter-sliced.jpg"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "step": "Sprinkle the egg with a little salt and pepper and place on top of the corned beef hash patty.  On the top side of the croissant, squeeze a layer of canned cheese over it.",
+                    "ingredients": [
+                        {
+                            "id": 1102047,
+                            "name": "salt and pepper",
+                            "localizedName": "salt and pepper",
+                            "image": "salt-and-pepper.jpg"
+                        },
+                        {
+                            "id": 13346,
+                            "name": "corned beef",
+                            "localizedName": "corned beef",
+                            "image": "corned-beef.png"
+                        },
+                        {
+                            "id": 18239,
+                            "name": "croissant",
+                            "localizedName": "croissant",
+                            "image": "croissants.jpg"
+                        },
+                        {
+                            "id": 1041009,
+                            "name": "cheese",
+                            "localizedName": "cheese",
+                            "image": "cheddar-cheese.png"
+                        },
+                        {
+                            "id": 11390,
+                            "name": "hash browns",
+                            "localizedName": "hash browns",
+                            "image": "hash-brown-potatoes.png"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 6,
+                    "step": "Place the top layer over the bottom half.",
+                    "ingredients": [],
+                    "equipment": []
+                },
+                {
+                    "number": 7,
+                    "step": "Serve immediately.",
+                    "ingredients": [],
+                    "equipment": []
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/redneck-breakfast-on-a-croissant-658134"
+}
