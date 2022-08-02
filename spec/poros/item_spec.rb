@@ -14,6 +14,7 @@ RSpec.describe Item do
     expect(@items).to be_all(Item)
     expect(item1.name).to be_a(String)
     expect(item1.expiration_date).to be_a(String)
+    expect(item1.id).to be_a(Integer)
   end
 
   context 'instance methods' do

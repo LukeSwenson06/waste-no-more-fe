@@ -72,6 +72,35 @@ RSpec.describe 'User dashboard' do
       click_link 'Buffalo Chicken Wings Wonton Wraps'
       expect(current_path).to eq("/recipes/#{recipe[:id]}") 
     end
+
+    it 'has buttons to delete an item and redirects to dashboard after deletion', :vcr do
+      allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
+      visit '/dashboard'
+      within "#Expiring" do
+        expect(page).to have_content("Cheese")
+        expect(page).to have_content("26/08/2022")
+        expect(page).to have_button("Delete Item")
+        click_button("Delete Item")
+      end
+    
+      expect(current_path).to eq('/dashboard')
+    end
+
+    it 'has a delete all exired items button', :vcr do
+      allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
+      visit '/dashboard'
+      
+      expect(page).to have_button("Delete All Expired Items")
+      within "#Expired" do
+        expect(page).to have_content("Chicken")
+        expect(page).to have_content("02/08/2022")
+        expect(page).to have_content("Beef")
+        expect(page).to have_content("02/08/2022")
+      end
+      click_button("Delete All Expired Items")
+    
+      expect(current_path).to eq('/dashboard')
+    end
   end
 
   context 'Sad Path' do

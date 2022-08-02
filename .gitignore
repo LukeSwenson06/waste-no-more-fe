@@ -30,3 +30,6 @@
 /config/application.yml
 
 coverage
+
+# Ignore vcr cassettes
+/spec/fixtures/vcr_cassettes

@@ -1,69 +1,6 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api.spoonacular.com/recipes/991625/information?apiKey=79275c1793124ec69adbec845f079f41
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.4.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
 
-      - Tue, 02 Aug 2022 17:54:29 GMT
-
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '1913'
-      Connection:
-      - keep-alive
-      Allow-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Headers:
-      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, Content-Language,
-        Content-Type, Cache-Control, Origin, X-Requested-With
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      Allow-Control-Allow-Methods:
-      - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      X-Api-Quota-Request:
-      - '1.0'
-      X-Api-Quota-Used:
-
-      - '88.74999999999991'
-      X-Api-Quota-Left:
-      - '61.250000000000085'
-
-      Cf-Cache-Status:
-      - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Report-To:
-
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tW0vKnaLH%2BYqWYrd49b2LZ39hvFVFe9%2B4SarwB1tMvT7MQyMA7TEXEdlpbwxY%2BhoKiAmuLmRg6Bj6r6q1kfo53Yf5BlvTvHZolCpKlNQ6Nh8h90d0lq5I2ayhkqYjzIREeXAW63mEZ7F1yzdtQjD7ss%3D"}],"group":"cf-nel","max_age":604800}'
-
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Cf-Ray:
-
-      - 7348add77db09812-SJC
-
-      Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
@@ -110,9 +47,4 @@ http_interactions:
         cooking cupcakes use a spoon and cut out enough area to insert Cadbury egg.","ingredients":[{"id":18139,"name":"cupcakes","localizedName":"cupcakes","image":"plain-cupcake.jpg"},{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]},{"number":8,"step":"Making
         sure the smaller part of the egg is facing up.","ingredients":[{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]},{"number":9,"step":"Frost
         the cupcake hiding the Cadbury egg.","ingredients":[{"id":18139,"name":"cupcakes","localizedName":"cupcakes","image":"plain-cupcake.jpg"},{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]}]}],"originalId":null,"spoonacularSourceUrl":"https://spoonacular.com/nutella-buttercream-cupcakes-with-hidden-cadbury-egg-991625"}'
-<<<<<<< HEAD
-  recorded_at: Tue, 02 Aug 2022 17:54:29 GMT
-=======
-  recorded_at: Tue, 02 Aug 2022 14:28:56 GMT
->>>>>>> main
-recorded_with: VCR 6.1.0
+

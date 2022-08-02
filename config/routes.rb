@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#show'
   delete '/users', to: 'users#destroy'
 
+  delete '/items', to: 'items#destroy'
+
   resources :items, only: [:new, :create]
   
   get '/foodbanks', to:'foodbanks#search'

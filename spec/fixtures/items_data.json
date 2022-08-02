@@ -2,15 +2,23 @@
   "data": [
     {
       "name": "Chicken",
-      "expiration": "02/08/2022"
+      "expiration": "02/08/2022",
+      "id": 1
+    },
+    {
+      "name": "Beef",
+      "expiration": "02/08/2022",
+      "id": 4
     },
     {
       "name": "Cheese",
-      "expiration": "26/08/2022"
+      "expiration": "26/08/2022",
+      "id": 2
     },
     {
       "name": "Peanut Butter",
-      "expiration": "05/12/2022"
+      "expiration": "05/12/2022",
+      "id": 3
     }
   ]
 }
