@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
     end
 
     def destroy
-        binding.pry
+        # binding.pry
     end
 
     private
