@@ -15,5 +15,7 @@ Rails.application.routes.draw do
 
   get '/foodbanks/search', to:'foodbanks#search'
 
+  get '/resources', to: 'resources#index'
+
   resources :recipes, only: [:show]
 end
