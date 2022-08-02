@@ -4,30 +4,38 @@
 <h3>Hello, <%= @user.name %>! Welcome To Your Fridge</h3>
 <%= link_to "Add Item", new_item_path %>
 <% if @items != [] %>
-  <h5>Expired Items</h5>
-  <div id='Expired'>
-    <ul class="list-group  list-group-flush list-group-flush">
-      <div class="container">
-        <div class="row align_items_start">
-          <div class="col">
-            Item
-          </div>
-          <div class="col">
-            Expiration Date
-          </div>
-          <div class="col">
-            <% expired_items_ids = [] %>
-              <% @items.each do |item| %>
-                <% if item.days_to_expired(Date.today) <= 0 %>
+  <% items_categorized = {expired: [], expiring: [], fresh: []}
+      @items.each do |item|
+        if item.days_to_expired(Date.today) <= 0
+          items_categorized[:expired] << item
+        elsif 0 < item.days_to_expired(Date.today) && item.days_to_expired(Date.today) <= 2
+          items_categorized[:expiring] << item
+        else
+          items_categorized[:fresh] << item
+        end
+      end %>
+  <% if items_categorized[:expired] != [] %>
+    <h5>Expired Items</h5>
+    <div id='Expired'>
+      <ul class="list-group  list-group-flush list-group-flush">
+        <div class="container">
+          <div class="row align_items_start">
+            <div class="col">
+              Item
+            </div>
+            <div class="col">
+              Expiration Date
+            </div>
+            <div class="col">
+              <% expired_items_ids = [] %>
+                <% items_categorized[:expired].each do |item| %>
                   <% expired_items_ids << item.id %>
                 <% end %>
-              <% end %>
-            <%= button_to "Delete All Expired Items", '/items', method: :delete, params: {items_ids: expired_items_ids} %>         
+              <%= button_to "Delete All Expired Items", '/items', method: :delete, params: {items_ids: expired_items_ids} %>         
+            </div>
           </div>
         </div>
-      </div>
-      <% @items.each do |item| %>
-        <% if item.days_to_expired(Date.today) <= 0 %>
+        <% items_categorized[:expired].each do |item| %>
           <div class="container">
             <div class="row align_items_start">
               <div class="col">
@@ -42,27 +50,27 @@
             </div>
           </div>
         <% end %>
-      <% end %>
-    </ul>
-  </div>
-  <h5>Expiring Items (Expire within 2 days)</h5>
-  <div id='Expiring'>
-  <ul class="list-group list-group-flush list-group-flush">
-      <div class="container">
-        <div class="row align_items_start">
-          <div class="col">
-            Item
-          </div>
-          <div class="col">
-            Expiration Date
-          </div>
-          <div class="col">
-            
+      </ul>
+    </div>
+  <% end %>
+  <% if items_categorized[:expiring] != [] %>
+    <h5>Expiring Items (Expire within 2 days)</h5>
+    <div id='Expiring'>
+    <ul class="list-group list-group-flush list-group-flush">
+        <div class="container">
+          <div class="row align_items_start">
+            <div class="col">
+              Item
+            </div>
+            <div class="col">
+              Expiration Date
+            </div>
+            <div class="col">
+              
+            </div>
           </div>
         </div>
-      </div>
-      <% @items.each do |item| %>
-        <% if (0 < item.days_to_expired(Date.today)) && (item.days_to_expired(Date.today) <= 2) %>
+        <% items_categorized[:expiring].each do |item| %>
           <div class="container">
             <div class="row align_items_start">
               <div class="col">
@@ -77,27 +85,27 @@
             </div>
           </div>
         <% end %>
-      <% end %>
-    </ul>
-  </div>
-  <h5>Fresh Items</h5>
-  <div id='Fresh'>
-    <ul class="list-group list-group-flush">
-      <div class="container">
-        <div class="row align_items_start">
-          <div class="col">
-            Item
-          </div>
-          <div class="col">
-            Expiration Date
-          </div>
-          <div class="col">
-            
+      </ul>
+    </div>
+  <% end %>
+  <% if items_categorized[:fresh] != [] %>
+    <h5>Fresh Items</h5>
+    <div id='Fresh'>
+      <ul class="list-group list-group-flush">
+        <div class="container">
+          <div class="row align_items_start">
+            <div class="col">
+              Item
+            </div>
+            <div class="col">
+              Expiration Date
+            </div>
+            <div class="col">
+              
+            </div>
           </div>
         </div>
-      </div>
-      <% @items.each do |item| %>
-        <% if item.days_to_expired(Date.today) > 2 %>
+        <% items_categorized[:fresh].each do |item| %>
           <div class="container">
             <div class="row align_items_start">
               <div class="col">

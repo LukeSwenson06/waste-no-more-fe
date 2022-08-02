@@ -129,6 +129,7 @@ RSpec.describe 'User dashboard' do
     end
 
     it 'only displays titles for sections that have items', :vcr do
+      allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
       user = User.new({name: "Bill", email: "Bill@gmail.com"})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       json = JSON.parse(File.read('./spec/fixtures/limited_items_data.json'), symbolize_names: true) 
@@ -138,7 +139,7 @@ RSpec.describe 'User dashboard' do
       allow(UserFacade).to receive(:user_items).and_return(items)
 
       visit '/dashboard'
-
+save_and_open_page
       expect(page).to have_content("Expiring Items")
       expect(page).to have_content("Fresh Items")
       expect(page).to_not have_content("Expired Items")
