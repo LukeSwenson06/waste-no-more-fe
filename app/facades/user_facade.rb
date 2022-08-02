@@ -1,4 +1,4 @@
-class UserFacade 
+class UserFacade
 
   def self.find_user(email)
     json = UserService.find_user_call(email)
