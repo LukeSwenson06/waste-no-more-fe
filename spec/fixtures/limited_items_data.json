@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "name": "Cheese",
+      "expiration": "26/08/2022",
+      "id": 2
+    },
+    {
+      "name": "Peanut Butter",
+      "expiration": "05/12/2022",
+      "id": 3
+    }
+  ]
+}
