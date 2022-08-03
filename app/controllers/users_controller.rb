@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-    if current_user
+    if session[:token]
       @user = current_user
       @items = UserFacade.user_items(session[:email])
       if @items != []
@@ -16,7 +16,11 @@ class UsersController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
     session[:token] = auth_hash['credentials']['token']
-    session[:email] = auth_hash['info']['email']
+    if auth_hash[:info][:email] == nil 
+      session[:email] = auth_hash[:info][:nickname]
+    else
+      session[:email] = auth_hash['info']['email']
+    end
     UserFacade.create_user(auth_hash)
     redirect_to '/dashboard'
   end
