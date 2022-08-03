@@ -15,29 +15,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 204
-      message: No Content
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 02 Aug 2022 19:53:18 GMT
-      Content-Length:
-      - '0'
+      - Tue, 02 Aug 2022 21:55:50 GMT
       Connection:
       - keep-alive
-      Cache-Control:
-      - no-cache
+      Content-Type:
+      - text/html; charset=UTF-8
       X-Request-Id:
-      - cc12c8aa-239d-4a2f-b2a9-94179d195c2e
+      - 376aa250-5909-4095-97b4-62410de49cf0
       X-Runtime:
-      - '0.016601'
+      - '0.005395'
+      Content-Length:
+      - '0'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 19:53:19 GMT
+  recorded_at: Tue, 02 Aug 2022 21:55:50 GMT
 - request:
     method: delete
     uri: https://waste-no-more-be.herokuapp.com/api/v1/items/4
@@ -53,27 +53,27 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 204
-      message: No Content
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 02 Aug 2022 19:53:19 GMT
-      Content-Length:
-      - '0'
+      - Tue, 02 Aug 2022 21:55:50 GMT
       Connection:
       - keep-alive
-      Cache-Control:
-      - no-cache
+      Content-Type:
+      - text/html; charset=UTF-8
       X-Request-Id:
-      - c932b1ae-1802-49f3-a265-038e85202ae3
+      - 8263acf4-5d6e-4658-8944-963d288c4a2a
       X-Runtime:
-      - '0.006253'
+      - '0.006939'
+      Content-Length:
+      - '0'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 19:53:19 GMT
+  recorded_at: Tue, 02 Aug 2022 21:55:51 GMT
 recorded_with: VCR 6.1.0
