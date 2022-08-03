@@ -4,8 +4,7 @@
 <div id= 'our_favourite_orgs'>
     <% @articles.each do |article|  %>
         <div id="article-<%= article.url %>">
-            <%= article.header %>
-            <%= link_to "#{article.url}", "#{article.url}" %>
+            <%= link_to "#{article.date + " " + article.header}", "#{article.url}" %>
         </div>
     <% end %>
 </div>
