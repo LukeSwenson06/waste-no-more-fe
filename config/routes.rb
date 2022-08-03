@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/auth/google_oauth2/callback', to: 'users#create'
 
+  get '/auth/twitter/callback', to: 'users#create', via: 'get'
+
   get '/', to: 'welcome#index'
 
   get '/dashboard', to: 'users#show'
