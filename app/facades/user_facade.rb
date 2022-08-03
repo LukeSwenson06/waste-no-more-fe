@@ -11,14 +11,9 @@ class UserFacade
 
   def self.user_items(email)
     json = UserService.get_user_items(email)
-    if json[:data]
-      items = json[:data].map do |item_data|
-        Item.new(item_data[:attributes])
-      end
-    else
-      items = nil
+    items = json[:data].map do |item_data|
+      Item.new(item_data[:attributes])
     end
-    return items
   end
 
 end

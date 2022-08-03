@@ -1,19 +1,23 @@
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <h1> Relevant Articles on Food Insecurity </h1>
 
 <div id= 'our_favourite_orgs'>
+  <ul>
+
     <% @articles.each do |article|  %>
         <div id="article-<%= article.url %>">
-            <%= article.header %>
-            <%= link_to "#{article.url}", "#{article.url}" %>
+          <li>
+            <%= link_to "#{article.date + " " + article.header}", "#{article.url}" %>
+          </li>
         </div>
     <% end %>
+  </ul>
 </div>
 
 <div id='our_favorite_orgs'>
-    <%= button_to 'Donate to Feeding America', 'https://secure.feedingamerica.org/site/Donation2;jsessionid=00000000.app20020b?idb=398464444&df_id=26876&26876.donation=form1&mfc_pref=T&NONCE_TOKEN=405A2D075D7131E201CD40AEAB6F3E6C&s_channel=google&s_onsite_promo=MainNav_Donate&s_subsrc=https://www.feedingamerica.org/find-your-local-foodbank&s_src=W228ORGSC&26876_donation=form1&s_referrer=google&_ga=2.156830523.1065449981.1659383540-2069769676.1659383540' %>
+    <%= button_to 'Donate to Feeding America', 'https://secure.feedingamerica.org/site/Donation2;jsessionid=00000000.app20020b?idb=398464444&df_id=26876&26876.donation=form1&mfc_pref=T&NONCE_TOKEN=405A2D075D7131E201CD40AEAB6F3E6C&s_channel=google&s_onsite_promo=MainNav_Donate&s_subsrc=https://www.feedingamerica.org/find-your-local-foodbank&s_src=W228ORGSC&26876_donation=form1&s_referrer=google&_ga=2.156830523.1065449981.1659383540-2069769676.1659383540', class: "btn btn-primary" %>
 </div>
-
+<br>
 <div id='our_favorite_news'>
-     <%= link_to 'Food Bank News', 'https://foodbanknews.org/' %>
+     <%= link_to 'Food Bank News', 'https://foodbanknews.org/', class: "btn btn-primary" %>
 </div>

@@ -1,5 +1,12 @@
 {
   "name": "waste-no-more-fe",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LukeSwenson06/waste-no-more-fe",
+  "author": "tjhaines-cap <tjhaines@eckerd.edu>",
+  "license": "MIT"
 }
