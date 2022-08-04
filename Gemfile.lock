@@ -117,14 +117,20 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.2)
     msgpack (1.5.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     nio4r (2.5.8)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     oauth (0.5.10)
     oauth2 (1.4.10)
@@ -264,7 +270,9 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  ruby
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -300,4 +308,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.3.6
+   2.3.11
