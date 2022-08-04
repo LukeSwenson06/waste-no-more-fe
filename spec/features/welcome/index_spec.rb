@@ -23,10 +23,9 @@ RSpec.describe "Welcome page" do
 
     visit '/'
 
-    expect(page).to have_button('Login With Google')
-    expect(page).to have_content('Waste No More')
+    expect(page).to have_link('Google Login')
     
-    click_button("Login With Google")
+    click_link("Google Login")
     expect(current_path).to eq('/dashboard')
 
     expect(page).to have_content("Hello, #{@user.name}! Welcome To Your Fridge")
@@ -54,10 +53,9 @@ RSpec.describe "Welcome page" do
 
     visit '/'
 
-    expect(page).to have_button('Login With Twitter')
-    expect(page).to have_content('Waste No More')
+    expect(page).to have_link('Twitter Login')
     
-    click_button("Login With Twitter")
+    click_link("Twitter Login")
     expect(current_path).to eq('/dashboard')
     
     expect(page).to have_content("Hello, #{@user.name}! Welcome To Your Fridge")
@@ -86,33 +84,32 @@ RSpec.describe "Welcome page" do
 
         visit '/'
 
-        expect(page).to have_button('Login With Google')
-        expect(page).to have_content('Waste No More')
+        expect(page).to have_link('Google Login')
         
-        click_button("Login With Google")
+        click_link("Google Login")
         expect(current_path).to eq('/dashboard')
         expect(page).to have_content("Hello, #{@user.name}! Welcome To Your Fridge")
         OmniAuth.config.test_mode = false
-      within ".links" do
+
         click_link 'Log Out'
+
         expect(current_path).to eq('/') 
-      end
     end
 
     it "has a link to resources", :vcr do
       visit '/'
-      within ".links" do
-        click_link 'Resources'
-        expect(current_path).to eq('/resources') 
-      end
+
+      click_link 'Resources'
+
+      expect(current_path).to eq('/resources') 
     end
 
     it "has a link to foodback index" do
       visit '/'
-      within ".links" do
-        click_link 'Foodbanks'
-        expect(current_path).to eq('/foodbanks') 
-      end
+
+      click_link 'Foodbanks'
+
+      expect(current_path).to eq('/foodbanks') 
     end
   end
   

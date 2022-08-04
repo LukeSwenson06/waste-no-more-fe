@@ -7,7 +7,7 @@ class RecipeFacade
     end
 
     def self.find_recipes_by_ingredients_string(ingredients)
-        json = RecipeService.find_recipes_by_ingredients_call(ingredients)
+        json = RecipeService.find_recipes_by_ingredients_string_call(ingredients)
         json.map do |recipe|
             Recipe.new(recipe)
         end
