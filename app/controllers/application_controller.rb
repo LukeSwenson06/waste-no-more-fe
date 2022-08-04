@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def active_session?
+    if session[:token]
+      return true
+    else 
+      return false
+    end
+  end
+
 end
