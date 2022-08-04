@@ -34,13 +34,14 @@
         <li class="nav-item active">
           <a class="nav-link" href="#"><%= link_to "Resources", '/resources', class: "nav-link" %></a>
         </li>
-        <li class="nav-item active"
-          <a class="nav-link" href="#"><%= link_to "Grocery List", "/groceries", method: :get %></a>
       </ul>
         <ul class="navbar-nav ms-auto">
         <% if session[:token] %>
           <li class="nav-item active">
             <a class="nav-link" href="#"><%= link_to "Log Out", users_path, method: :delete, class: "nav-link"  %></a>
+          </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="#"><%= link_to "Grocery List", "/groceries", method: :get, class: "nav-link" %></a>
           </li>
         <% else %>
           <li class="nav-item active">
@@ -48,6 +49,8 @@
           <li class="nav-item active">
             <a class="nav-link" href="#"><%= link_to "Twitter Login", '/auth/twitter', class: "nav-link" %></a>
         <% end %>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><%= link_to "Log Out", users_path, method: :delete, class: "nav-link"  %></a>
         </ul>
     </div>
   </nav>
