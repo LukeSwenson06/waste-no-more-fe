@@ -1,0 +1,14 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.data.charitynavigator.org/v2/Organizations?app_id=c9425984&app_key=85d00a11c320a1a28c1c32c93ce807f4&causeID=18&pageNum=1&pageSize=25&sort=rating&state=NY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.4.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:

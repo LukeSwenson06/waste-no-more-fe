@@ -1,0 +1,19 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=WctFiu26QfenXXIA3WtjAo835W2T8HE1&fq=headline:%20(%22Food%20Bank%22)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.4.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK

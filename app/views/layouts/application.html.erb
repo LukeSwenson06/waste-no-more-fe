@@ -8,52 +8,35 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-  <style>
-    .navbar
-    {
-      background-color: MediumSeaGreen
-    }
-  </style>
+
 
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand" href="#"><a href="https://imgbb.com/"><img src="https://i.ibb.co/vYqBMmk/WNM-1-1.png" width="110" height="110" alt="WNM-1-1" border="0"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav>
+      <img src="" alt="">
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "Home", "/dashboard", class: "nav-link"%><span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "Foodbanks", '/foodbanks', class: "nav-link" %><span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "Resources", '/resources', class: "nav-link" %></a>
-        </li>
-      </ul>
-        <ul class="navbar-nav ms-auto">
+      <ul class="links">
         <% if session[:token] %>
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><%= link_to "Log Out", users_path, method: :delete, class: "nav-link"  %></a>
-          </li>
-            <li class="nav-item active">
-            <a class="nav-link" href="#"><%= link_to "Grocery List", "/groceries", method: :get, class: "nav-link" %></a>
-          </li>
+          <li class="nav-link" id="right_links"><%= link_to "Log Out", users_path, method: :delete %></li>
+          <li class="nav-link" id="right_links"><%= link_to "Grocery List", "/groceries", method: :get %></li>
+          <li class="nav-link" id="left_links"><%= link_to "Home", "/dashboard" %></li>
         <% else %>
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><%= link_to "Google Login", '/auth/google_oauth2', class: "nav-link"  %></a>
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><%= link_to "Twitter Login", '/auth/twitter', class: "nav-link" %></a>
+          <li class="nav-link" id="right_links"><%= link_to "Log In", '/auth/google_oauth2' %></li>
         <% end %>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "Log Out", users_path, method: :delete, class: "nav-link"  %></a>
-        </ul>
-    </div>
-  </nav>
+        <li class="nav-link" id="left_links"><%= link_to "Resources", '/resources' %></li>
+        <li class="nav-link" id="left_links"><%= link_to "Foodbanks", '/foodbanks' %></li>
+      </ul>
+    </nav>
+
+    <center>
+      <h1>Waste No More</h1>
+    </center>
+
+    <% flash.each do |type, msg| %>
+      <div>
+        <h3 style= "color:red">  <%= msg %> </h3>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
