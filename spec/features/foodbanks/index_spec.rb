@@ -20,7 +20,7 @@ describe 'Food Bank Index API call', :vcr do
 
         within '#foodbank-742227731' do 
             expect(page).to have_content('Community Food Share')
-            expect(page).to have_content('Score: 97.13')
+            expect(page).to have_content('Score: 97.17')
             expect(page).to have_link('Find out more about this foodbank')
         end
     end
