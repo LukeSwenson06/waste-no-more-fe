@@ -1,3 +1,14 @@
+<style>
+  .fixed{
+        width:100%;
+        height:2500px;
+        background-image:url("https://wallpaperaccess.com/full/3662969.jpg");
+        background-size:cover;
+        background-attachment:fixed;
+    }
+</style>
+
+<div class="fixed">
 <%= form_with url: '/groceries', method: :post, local: true do |f| %>
     <%= f.label :name, "Name:" %>
     <%= f.text_field :name %>
@@ -13,4 +24,5 @@
 <% if @groceries.count >= 1%>
     <%= button_to "Remove All", grocery_path(0), method: :delete %>
 <% end %>
+</div>
 

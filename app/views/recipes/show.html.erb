@@ -1,5 +1,24 @@
+<style>
+  .fixed{
+        width:100%;
+        height:2500px;
+        background-image:url("https://wallpaperaccess.com/full/3662969.jpg");
+        background-size:cover;
+        background-attachment:fixed;
+    }
 
-<center><h2><%= @recipe.title %></h2></center>
+    .card-custom {
+        background-color: MediumSeaGreen;
+        width: 70rem;
+        
+    }
+</style>
+
+<div class="fixed">
+<center>
+<br>
+<div class="card-custom border border-dark">
+<h2><%= @recipe.title %></h2>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-2">
@@ -21,18 +40,21 @@
   <br>
 
   <div class="col align-self-center">
-    <center><h2>Recipe Summary</h2></center>
+    <h2>Recipe Summary</h2>
   </div>
   <p class="lead">
     <%= strip_tags(@recipe.summary) %>
   </p>
   <br>
 
-<center><h2>Wine Pairings</h2></center>
+<h2>Wine Pairings</h2>
 <% if @recipe.wine_pairings != nil && @recipe.wine_pairings != []%>
   <% @recipe.wine_pairings.each do |wine| %>
-    <center><p><%= wine.titleize %></p></center>
+    <p><%= wine.titleize %></p>
   <% end %>
 <% else %>
-  <center><h2>There are no wine pairings for this recipe</h2></center>
+  <h2>There are no wine pairings for this recipe</h2>
 <% end %>
+  </div>
+  </center>
+</div>
