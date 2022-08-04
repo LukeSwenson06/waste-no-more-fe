@@ -18,6 +18,7 @@
       <ul class="links">
         <% if current_user %>
           <li class="nav-link" id="right_links"><%= link_to "Log Out", users_path, method: :delete %></li>
+          <li class="nav-link" id="right_links"><%= link_to "Grocery List", "/groceries", method: :get %></li>
           <li class="nav-link" id="left_links"><%= link_to "Home", "/dashboard" %></li>
         <% else %>
           <li class="nav-link" id="right_links"><%= link_to "Log In", '/auth/google_oauth2' %></li>

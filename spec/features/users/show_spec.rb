@@ -143,7 +143,6 @@ RSpec.describe 'User dashboard' do
       allow(UserFacade).to receive(:user_items).and_return(items)
 
       visit '/dashboard'
-
       expect(page).to have_content("Expiring Items")
       expect(page).to have_content("Fresh Items")
       expect(page).to_not have_content("Expired Items")
