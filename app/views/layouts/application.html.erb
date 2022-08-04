@@ -16,7 +16,7 @@
       <img src="" alt="">
 
       <ul class="links">
-        <% if current_user %>
+        <% if session[:token] %>
           <li class="nav-link" id="right_links"><%= link_to "Log Out", users_path, method: :delete %></li>
           <li class="nav-link" id="right_links"><%= link_to "Grocery List", "/groceries", method: :get %></li>
           <li class="nav-link" id="left_links"><%= link_to "Home", "/dashboard" %></li>
