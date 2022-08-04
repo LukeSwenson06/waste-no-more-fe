@@ -11,9 +11,15 @@ RSpec.describe UserFacade do
     expect(user.email).to eq("Tom@gmail.com")
   end
 
-  it 'can find a users items' do
+  it 'can find a users items', :vcr do
     auth_hash = {:info => {:name => "Tom", :email => "Tom@gmail.com"}}
     UserFacade.create_user(auth_hash)
-    ItemFacade.create_item("Tom@gmail.co")
+    ItemFacade.create_item("Tom@gmail.com", {name: "Peanut", expiration_date: "08/05/22"})
+    ItemFacade.create_item("Tom@gmail.com", {name: "Walnut", expiration_date: "08/05/22"})
+    items = UserFacade.user_items("Tom@gmail.com")
+    peanut = items[0]
+    expect(items).to be_all(Item)
+    expect(items.length).to eq(2)
+    expect(peanut.name).to eq("Peanut")
   end
 end
