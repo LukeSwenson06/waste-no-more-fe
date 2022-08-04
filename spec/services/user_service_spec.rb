@@ -11,4 +11,11 @@ RSpec.describe UserService do
     expect(user_attributes).to have_key(:name)
     expect(user_attributes).to have_key(:email)
   end
+
+  it 'can retrieve user items', :vcr do
+    auth_hash = {:info => {:name => "Tom", :email => "Tom@gmail.com"}}
+    UserService.create_user_call(auth_hash)
+    items = UserService.get_user_items("Tom@gmail.com")
+    expect(items[:data]).to eq([])
+  end
 end

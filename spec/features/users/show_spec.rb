@@ -30,7 +30,6 @@ RSpec.describe 'User dashboard' do
     it 'displays the items and the days until they expire in expired and expiring sections in the users fridge', :vcr do
       allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
 
-      UserService.find_user("Tom@gmail.com")
       visit '/dashboard'
 
       expect(page).to have_content("Expired Items")
