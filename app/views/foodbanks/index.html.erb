@@ -54,24 +54,34 @@
         background-size: cover;
     }
 
-</style>
-<div class="bg">
-    <div class="container">
-        <center>
-            <br><b><h1 class="card-title  bg-success border border-dark ">Foodbanks in "<%= @foodbanks.first.state %>"</h1></b><br>
-        </center>
+    .fixed{
+        width:100%;
+        height:2000px;
+        background-image:url("https://wallpaperaccess.com/full/3662969.jpg");
+        background-size:cover;
+        background-attachment:fixed;
+    }
 
+</style>
+
+<center>
+<div class="fixed">
+    <div class="container">
+            <br><b><h1 class="card-title  bg-success border border-dark ">Foodbanks in "<%= @foodbanks.first.state %>"</h1></b><br>
         <% @foodbanks.each do |foodbank| %>
-            <center>
-                <div id="foodbanks" class="card bg-sea border-dark" style="width: 502px">
-                    <div id='foodbank-<%=foodbank.id%>'class="card-custom ">
-                    <b><div class="card-custom header"><%= foodbank.name %><br></b>
+        <center>
+            <div id="foodbanks" class="card bg-sea border-dark" style="width: 502px">
+                <div id='foodbank-<%=foodbank.id%>'class="card-custom ">
+                <b><div class="card-custom header"><%= foodbank.name %><br></b>
                         <div class="fb-items">
                             <b>Score: <%= foodbank.rating %><br></b>
                             <b><%= link_to "Find out more about this foodbank", "/foodbanks/#{foodbank.id}" %><br></b>
                         </div>
                     </div>
                 </div>
-            </center><br>
+            </div><br>
+        </center>
         <% end %>
+    </div>
 </div>
+</center>
