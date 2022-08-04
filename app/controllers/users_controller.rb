@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-    if session[:token]
+    #  binding.pry
+    if active_session?
       @user = current_user
       @items = UserFacade.user_items(session[:email])
       if @items != []
