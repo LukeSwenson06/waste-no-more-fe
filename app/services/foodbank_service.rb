@@ -8,7 +8,6 @@ class FoodbankService
 
     def self.search_state(state)
         response = conn.get("/v2/Organizations?&pageSize=25&pageNum=1&causeID=18&state=#{state}&sort=rating")
-        binding.pry
         data = JSON.parse(response.body, symbolize_names: true)
     end
 
