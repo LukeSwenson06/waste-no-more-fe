@@ -59,16 +59,21 @@
   <div class="container">
     <div class="row ">
       <br>
-      <% @recipes.each do |recipe| %>
-        <div class="col-lg-4">
-          <div class="card-custom ">
-            <center>
-          <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
-          <img src="<%= recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
-            </center>
+      <% if @recipes %>
+        <% @recipes.each do |recipe| %>
+          <div class="col-lg-4">
+            <div class="card-custom ">
+              <center>
+            <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
+            <img src="<%= recipe.image %>" style="width:200px;height:230px" alt="Recipe Photo">
+              </center>
+            </div>
           </div>
-        </div>
+        <% end %>
+      <% else %>
+        <p>Recipe search limit reached, try again tomorrow</p>
       <% end %>
     </div><br>
   </div>
 </div>
+

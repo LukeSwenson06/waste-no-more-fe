@@ -139,23 +139,26 @@
   <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
     <h1>Recipe Suggestions</h1>
   </div>
-  <div class="container">
-    <% col_num = 0 %>
-    <div class="row">
-    <% @recipes.each do |recipe| %>
-      <div class="col">
-        <div class="card">
-          <img src="<%= recipe.image %>" class="card-img-top" alt="Recipe Photo"/>
-          <div class="card-body">
-            <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
-            <p>Likes: <%= recipe.likes %></p>
-            <p>Fridge Ingredient(s) Count: <%= recipe.used_ingredients %></p>
-            <p>Missing Ingredient(s) Count: <%= recipe.unused_ingredients %></p>
+  <% if @recipes %>
+    <div class="container">
+      <div class="row">
+      <% @recipes.each do |recipe| %>
+        <div class="col">
+          <div class="card">
+            <img src="<%= recipe.image %>" class="card-img-top" alt="Recipe Photo"/>
+            <div class="card-body">
+              <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
+              <p>Likes: <%= recipe.likes %></p>
+              <p>Fridge Ingredient(s) Count: <%= recipe.used_ingredients %></p>
+              <p>Missing Ingredient(s) Count: <%= recipe.unused_ingredients %></p>
+            </div>
           </div>
-        </div>
+         </div>
+      <% end %>
       </div>
-    <% end %>
     </div>
-  </div>
+  <% else %>
+    <p>Recipe search limit reached, try again tomorrow</p>
+  <% end %>
 <% end %>
 </center>

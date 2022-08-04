@@ -5,11 +5,6 @@ class GroceryFacade
         json = JSON.parse(response.body, symbolize_names: true)
         if json[:errors].present?
             Error.new(json[:errors])
-        # else
-            
-        #     binding.pry
-            
-        #     Grocery.new(json[:data][:attributes])
         end
     end
 
