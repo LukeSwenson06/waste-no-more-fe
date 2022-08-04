@@ -1,8 +1,77 @@
+<style>
+    .card-custom {
+        background-color: MediumSeaGreen;
+        border-color: black;
+        width: 500px
+    }
+    .card-title {
+        background-color: MediumSeaGreen;
+        border-color: black;
+        width: 500px;
+        padding-bottom: 25px;
+    }
+    .bg-sea {
+        background-color: MediumSeaGreen;
+    }
+    .rcorners1 {
+        border-radius: 25px;
+        background: #73AD21;
+        padding: 20px;
+        width: 300px;
+        height: 150px;
+    }
+    .border-primary {
+        border-color: black
+    }
+    .fb-items {
+        background-color: lightgreen;
+        font-size: 25px
+    }
+    .header{
+        font-size: 30px
+    }
+    .border{
+        padding-top: 25px;
+        background-color: lightgreen
+    }
+    .img{
+        opacity: 0.8;
+    }
+    body, html {
+        height: 100%;
+    }
 
-<% @foodbanks.each do |foodbank| %>
-    <div id='foodbank-<%=foodbank.id%>'>
-        <%= foodbank.name %><br>
-        Score: <%= foodbank.rating %><br>
-        <%= link_to "Find out more about this foodbank", "/foodbanks/#{foodbank.id}" %><br>
-    </div>
-<% end %>
+    .bg {
+        /* The image used */
+        background-image: url("https://wallpaperaccess.com/full/3662969.jpg");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
+<div class="bg">
+    <div class="container">
+        <center>
+            <br><b><h1 class="card-title  bg-success border border-dark ">Foodbanks</h1></b><br>
+        </center>
+
+        <% @foodbanks.each do |foodbank| %>
+            <center>
+                <div id="foodbanks" class="card bg-sea border-dark" style="width: 502px">
+                    <div id='foodbank-<%=foodbank.id%>'class="card-custom ">
+                    <b><div class="card-custom header"><%= foodbank.name %><br></b>
+                        <div class="fb-items">
+                            <b>Score: <%= foodbank.rating %><br></b>
+                            <b><%= link_to "Find out more about this foodbank", "/foodbanks/#{foodbank.id}" %><br></b>
+                        </div>
+                    </div>
+                </div>
+            </center><br>
+        <% end %>
+</div>
