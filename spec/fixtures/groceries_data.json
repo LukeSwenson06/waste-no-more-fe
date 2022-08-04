@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "name": "Lamb",
+            "id": 1
+        },
+        {
+            "name": "Beef",
+            "id": 4
+        },
+        {
+            "name": "Cheese",
+            "id": 2
+        },
+        {
+            "name": "Peanut Butter",
+            "id": 3
+        }
+    ]
+}

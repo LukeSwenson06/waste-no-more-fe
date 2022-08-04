@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spoonacular.com/recipes/991625/information?apiKey=59081658bcfe4ba0bbee5ee7f1d8b0bf
+    uri: https://api.spoonacular.com/recipes/991625/information?apiKey=244f5d456f3e4d1d8c5e414081025f50
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 21:55:46 GMT
+      - Thu, 04 Aug 2022 15:46:01 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -40,21 +40,21 @@ http_interactions:
       X-Api-Quota-Request:
       - '1.0'
       X-Api-Quota-Used:
-      - '34.100000000000016'
+      - '10.499999999999998'
       X-Api-Quota-Left:
-      - '115.89999999999998'
+      - '139.5'
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xUB8aEnInwcYzsDuz%2Bfph5olRZmWbNm02SCyQmyR5ZZbN0OarVGvvDUJ%2BRCZL7Gs0UbowucRWOwmphFlZHCWE8Jai33hzg6eSHZBoyf9XctwxnmJBrMcFrNo7w2H%2F6Ngrn83VhA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ivbjFdBhUeb9LIiufBdBbbvS34KenTFfdCR6pfS36PPJgmP%2FwErwFnbhY7bw1yB3qolPrmx%2BZlnJ2tqmgE%2F9k6Asi3jKL33OW6O87qqRoke5HGYiS5QbvCfw7QORP8v2eDu5rDjW2PAGPvKAEPh%2F2lE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 734a0f463d3e8e96-DEN
+      - 73586c64dbfe986d-SJC
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -102,5 +102,5 @@ http_interactions:
         cooking cupcakes use a spoon and cut out enough area to insert Cadbury egg.","ingredients":[{"id":18139,"name":"cupcakes","localizedName":"cupcakes","image":"plain-cupcake.jpg"},{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]},{"number":8,"step":"Making
         sure the smaller part of the egg is facing up.","ingredients":[{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]},{"number":9,"step":"Frost
         the cupcake hiding the Cadbury egg.","ingredients":[{"id":18139,"name":"cupcakes","localizedName":"cupcakes","image":"plain-cupcake.jpg"},{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[]}]}],"originalId":null,"spoonacularSourceUrl":"https://spoonacular.com/nutella-buttercream-cupcakes-with-hidden-cadbury-egg-991625"}'
-  recorded_at: Tue, 02 Aug 2022 21:55:46 GMT
+  recorded_at: Thu, 04 Aug 2022 15:46:01 GMT
 recorded_with: VCR 6.1.0
