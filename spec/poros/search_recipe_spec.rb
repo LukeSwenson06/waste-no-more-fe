@@ -7,7 +7,6 @@ RSpec.describe Recipe do
     @recipes = json[:results].map do |recipe|
       SearchRecipe.new(recipe)
     end
-    binding.pry
   end
 
   it 'exists' do
