@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def show
-    binding.pry
     if active_session?
       @user = current_user
       @items = UserFacade.user_items(session[:email])
@@ -17,7 +16,7 @@ class UsersController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
     session[:token] = auth_hash['credentials']['token']
-    if auth_hash[:info][:email] == nil 
+    if auth_hash[:info][:email] == nil
       session[:email] = auth_hash[:info][:nickname]
     else
       session[:email] = auth_hash['info']['email']
@@ -30,6 +29,6 @@ class UsersController < ApplicationController
     session.destroy
     redirect_to '/'
   end
-  
-  
+
+
 end

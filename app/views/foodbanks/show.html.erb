@@ -32,7 +32,7 @@
 
     .bg {
         /* The image used */
-        background-image: url("https://wallpaperaccess.com/full/3662969.jpg");
+        background-image: url('{% static 'https://wallpaperaccess.com/full/3662969.jpg' %}' );
 
         /* Full height */
         height: 100%;
@@ -41,10 +41,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed
     }
 
 </style>
-<div class="bg ">
+
+<div class="bg background-attachment: fixed">
     <br><br><br>
     <div class="img container">
         <div id="information" class="card border-dark">
