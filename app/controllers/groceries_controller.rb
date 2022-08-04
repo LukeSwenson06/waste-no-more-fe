@@ -4,6 +4,8 @@ class GroceriesController < ApplicationController
     end
 
     def create
+        
+        
         if GroceryFacade.create_grocery(current_user.email, params[:name])
             redirect_to "/groceries"
         else

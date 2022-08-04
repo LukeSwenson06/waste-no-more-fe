@@ -2,6 +2,7 @@ class UserFacade
 
   def self.find_user(email)
     json = UserService.find_user_call(email)
+    
     User.new(json[:data][:attributes])
   end
 
@@ -18,6 +19,7 @@ class UserFacade
 
   def self.user_groceries(email)
     json = UserService.get_user_groceries(email)
+    
     groceries = json[:data].map do |grocery_data|
       Grocery.new(grocery_data[:attributes])
     end
