@@ -1,7 +1,7 @@
 class RecipeFacade
     def self.find_recipes(ingredients)
         json = RecipeService.find_recipes_call(ingredients)
-        if json[:code] == 402
+        if json.is_a?(Hash) && json[:code] == 402
             return nil
         else
             json.map do |recipe|
