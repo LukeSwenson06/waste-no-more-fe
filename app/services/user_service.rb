@@ -5,16 +5,12 @@ class UserService < BaseService
       if auth_hash[:info][:email] == nil
           req.body = {
           name: auth_hash[:info][:name],
-          email: auth_hash[:info][:nickname],
-          image: auth_hash[:info][:image],
-          token: auth_hash[:credentials][:token]
+          email: auth_hash[:info][:nickname]
         }
       else      
           req.body = {
-          name: auth_hash['info']['name'],
-          email: auth_hash['info']['email'],
-          image: auth_hash['info']['image'],
-          token: auth_hash['credentials']['token']
+          name: auth_hash[:info][:name],
+          email: auth_hash[:info][:email]
         }
       end
     end
