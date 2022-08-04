@@ -16,4 +16,11 @@ class UserFacade
     end
   end
 
+  def self.user_groceries(email)
+    json = UserService.get_user_groceries(email)
+    groceries = json[:data].map do |grocery_data|
+      Grocery.new(grocery_data[:attributes])
+    end
+  end
+
 end
