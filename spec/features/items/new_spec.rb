@@ -58,8 +58,6 @@ RSpec.describe 'Add new item to fridge' do
         it "returns failed requests new item form and displays error message" do
             allow(ItemFacade).to receive(:create_item).and_return(nil)
             visit new_item_path
-            fill_in :name, with: 'Spinach'
-            fill_in :expiration_date, with: '25/100/2022'
             click_button 'Submit Item'
 
             expect(current_path).to  eq('/items/new')
