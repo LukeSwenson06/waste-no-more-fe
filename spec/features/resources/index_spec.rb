@@ -21,6 +21,6 @@ describe 'resources index page', :vcr do
         end
 
         expect(page).to have_content(" aid organizations are facing labor shortages and supply chain disruptions in their effort to help the 1.5 million New Yorkers who cannot afford food.")
-        expect(page).to have_link('https://www.nytimes.com/2021/12/13/business/economy/new-york-food-banks-pandemic.html')
+        expect(page).to have_link('2021-12-13 The city’s aid organizations are facing labor shortages and supply chain disruptions in their effort to help the 1.5 million New Yorkers who cannot afford food.')
     end 
 end

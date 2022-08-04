@@ -34,5 +34,14 @@ class UserService < BaseService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.get_user_groceries(email)
+    response = local_connection.get('/api/v1/groceries') do |req|
+      req.body = {
+        email: email
+      }
+    end
+    json = JSON.parse(response.body, symbolize_names: true)
+  end
+
 
 end

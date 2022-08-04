@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 5f53d944-fd26-4f92-90df-3d2cd1bed121
+      - b52d2aab-8922-484d-82c7-22c55ca85404
       X-Runtime:
-      - '0.018917'
+      - '0.018629'
       Content-Length:
       - '10286'
     body:
@@ -136,7 +136,7 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":53,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 04 Aug 2022 17:38:13 GMT
+  recorded_at: Thu, 04 Aug 2022 17:58:09 GMT
 - request:
     method: delete
     uri: http://localhost:3000/api/v1/items/4
@@ -158,9 +158,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 28c7f190-a881-4ca9-9227-046ec6251ccd
+      - 95c5691b-3700-4e82-ada0-8d787eb3f02b
       X-Runtime:
-      - '0.018690'
+      - '0.023878'
       Content-Length:
       - '10286'
     body:
@@ -273,5 +273,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":53,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 04 Aug 2022 17:38:13 GMT
+  recorded_at: Thu, 04 Aug 2022 17:58:09 GMT
 recorded_with: VCR 6.1.0
