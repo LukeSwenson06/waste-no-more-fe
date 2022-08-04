@@ -1,5 +1,3 @@
-
-
 <center>
 <h3>Hello, <%= @user.name %>! Welcome To Your Fridge</h3>
 <%= link_to "Add Item", new_item_path %>
@@ -30,14 +28,12 @@
                 Expiration Date
               </div>
             </div>
-            <div class="col">
-              
-                <% expired_items_ids = [] %>
-                  <% items_categorized[:expired].each do |item| %>
-                    <% expired_items_ids << item.id %>
-                  <% end %>
-                <%= button_to "Delete All Expired Items", '/items', method: :delete, params: {items_ids: expired_items_ids} %>         
-              
+            <div class="col">  
+              <% expired_items_ids = [] %>
+                <% items_categorized[:expired].each do |item| %>
+                  <% expired_items_ids << item.id %>
+                <% end %>
+              <%= button_to "Delete All Expired Items", '/items', method: :delete, params: {items_ids: expired_items_ids}, class: "btn btn-secondary" %>         
             </div>
           </div>
         </div>
@@ -51,7 +47,7 @@
                 <li class="list-group-item list-group-item-danger"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id} %>
+                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id}, class: "btn btn-secondary" %>
               </div>
             </div>
           </div>
@@ -91,7 +87,7 @@
                 <li class="list-group-item list-group-item-warning"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id}  %>
+                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id}, class: "btn btn-secondary"  %>
               </div>
             </div>
           </div>
@@ -131,7 +127,7 @@
                 <li class="list-group-item list-group-item-success"><%= item.expiration_date %></li>
               </div>
               <div class="col">
-                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id}  %>
+                <%= button_to "Delete #{item.name}", '/items', method: :delete, params: {id: item.id}, class: "btn btn-secondary"  %>
               </div>
             </div>
           </div>
@@ -140,9 +136,9 @@
     </div>
   <% end %>
   <br>
-<div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+  <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
     <h1>Recipe Suggestions</h1>
-</div>
+  </div>
   <div class="container">
     <% col_num = 0 %>
     <div class="row">
