@@ -13,12 +13,16 @@
 </ul>
 <li> Usage </li>
 <li> Features </li>
+<li> Application Images </li>
 <li> Contributions </li>
 </ol>
 </details>
 
 ## About the Project
- Waste No More is an application dedicated to help people reduce food waste at home by tracking food items, expiration dates, and help locate the nearest donation centers for food close to expiring. Using the built in notification system, users will be notified for food about to be expired and resources are provided to educate users on food waste management, food storage and how to donate food. This project was created for the 2203 Backend Program Module 3 Consultancy Project.  
+ Waste No More is an application dedicated to help people reduce food waste at home by tracking food items, expiration dates, and help locate the nearest donation centers for food close to expiring. Resources are provided to educate users on food waste management, food storage and how to donate food. This project was created for the 2203 Backend Program Module 3 Consultancy Project.  
+
+ Partner Repo: https://github.com/LukeSwenson06/waste_no_more-be.git
+ Heroku App: https://waste-no-more-fe.herokuapp.com/
 
 ###Built With
 - ![Ruby On Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
@@ -34,14 +38,11 @@
 - recipe_api_key: https://spoonacular.com/food-api
 - resource_api_key: https://developer.nytimes.com/
 - foodbank_app_key: https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=1397
-- foodbank_app_id: https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=1397
 - article_api_key: https://developer.nytimes.com/
-- TWITTER_API_KEY: https://developer.twitter.com/en/docs/twitter-api
-
 
 Oauth credentials
 - Google Oauth: https://console.cloud.google.com/
-- TWITTER_API_KEY: https://developer.twitter.com/en/docs/twitter-api
+- Twitter Oauth: https://developer.twitter.com/en/docs/twitter-api
 
 2. Clone the repo
 `git clone git@github.com:LukeSwenson06/waste-no-more-fe.git`
@@ -55,6 +56,19 @@ Oauth credentials
 5. Run `Bundle Exec Figaro Install` to generate `application.yml` file
 
 6. In `application.yml` file, add api keys titled
+- `recipe_api_key: YOUR_API_KEY`
+- `resource_api_key: YOUR_API_KEY`
+- `foodbank_app_key: YOUR_API_KEY`
+- `foodbank_app_id: YOUR_APP_ID`
+- `article_api_key: YOUR_API_KEY`
+- `GOOGLE_CLIENT_ID: YOUR_CLIENT_ID`
+- `GOOGLE_CLIENT_SECRET: YOUR_CLIENT_SECRET`
+- `TWITTER_API_KEY: YOUR_API_KEY`
+- `TWITTER_API_KEY_SECRET: YOUR_API_KEY_SECRET`
+
+7. Run `rails s` in terminal and go to `localhost:5000` on your browser
+
+8. Happy Hunting!
 
 ## Features
 - Users can manually input food items from their kitchen onto the app using the Add Item button.
@@ -66,13 +80,15 @@ Oauth credentials
 - Add Groceries to your list that you want to buy in the future.
 - Search for recipes by name or by ingredients that are not in your fridge.
 
+## Application Images
+
 ## Contributions
 <a href="https://github.com/LukeSwenson06/waste-no-more-fe/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=LukeSwenson06/waste-no-more-fe" />
 </a>
-<p>🔥@amsalmeron</p>
-<p>🚀@caden-jarrett</p>
-<p>🏅@DrewProebstel</p>
-<p>🎊@LukeSwenson06</p>
-<p>✨@ross-ian28</p>
-<p>🎉@tjhaines-cap</p>
+<p>🔥@amsalmeron Github:https://github.com/amsalmeron LinkedIn: https://linkedin.com/in/antonio-salmeron  </p>
+<p>🚀@caden-jarrett Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/caden-jarrett-0655051b6/</p>
+<p>🏅@DrewProebstel Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/drew-proebstel/ </p>
+<p>🎊@LukeSwenson06 Github: https://github.com/LukeSwenson06 Linkedin: https://www.linkedin.com/in/luke-swenson </p>
+<p>✨@ross-ian28 Github:https://github.com/ross-ian28 Linkedin: https://www.linkedin.com/in/ross-ian28/ </p>
+<p>🎉@tjhaines-cap Github:https://github.com/tjhaines-cap LinkedIn: https://www.linkedin.com/in/thomas-haines-9b93451a0/ </p>
