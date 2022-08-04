@@ -1,33 +1,32 @@
 
+<center><h2><%= @recipe.title %></h2></center>
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <div style = "position:relative;left:100px;">
-        <h2><%= @recipe.title %></h2>
-        <p><small class="text-muted">Servings: <%= @recipe.servings %></small></p>
-        <p><small class="text-muted">Total Time: <%= @recipe.ready_minutes %></small></p>
-        <p><small class="text-muted">Health Score: <%= @recipe.health_score %></small></p>
-        <p><small class="text-muted">Vegetarian: <%= @recipe.vegetarian %></small></p>
-        <p><small class="text-muted">Vegan: <%= @recipe.vegan %></small></p>
-        <p><small class="text-muted">Gluten Free: <%= @recipe.gluten_free %></small></p>
-        <p><small class="text-muted">Dairy Free: <%= @recipe.dairy_free %></small></p>
-        <p><small class="text-muted">Dairy Free: <%= @recipe.sustainable %></small></p>
-        <p><a href="<%= "#{@recipe.url}" %>">Recipe Instructions</a></p>
-      </div>
+  <div class="row justify-content-center">
+    <div class="col-md-2">
+      <p><small class="text-muted">Servings: <%= @recipe.servings %></small></p>
+      <p><small class="text-muted">Total Time: <%= @recipe.ready_minutes %></small></p>
+      <p><small class="text-muted">Health Score: <%= @recipe.health_score %></small></p>
+      <p><small class="text-muted">Vegetarian: <%= @recipe.vegetarian %></small></p>
+      <p><small class="text-muted">Vegan: <%= @recipe.vegan %></small></p>
+      <p><small class="text-muted">Gluten Free: <%= @recipe.gluten_free %></small></p>
+      <p><small class="text-muted">Dairy Free: <%= @recipe.dairy_free %></small></p>
+      <p><small class="text-muted">Sustainable: <%= @recipe.sustainable %></small></p>
+      <p><a href="<%= "#{@recipe.url}" %>">Recipe Instructions</a></p>
     </div>
-    <div class="col">
-      <img src="<%= @recipe.image %>" class="float-right" alt="Recipe Photo">
+    <div class="col-md-4">
+      <img src="<%= @recipe.image %>" class="rounded float-start" alt="Recipe Photo">
     </div>
   </div>
-  <br></br>
+</div>
+  <br>
 
   <div class="col align-self-center">
     <center><h2>Recipe Summary</h2></center>
- </div>
-<p class="lead">
-  <%= strip_tags(@recipe.summary) %>
-</p>
-<br></br>
+  </div>
+  <p class="lead">
+    <%= strip_tags(@recipe.summary) %>
+  </p>
+  <br>
 
 <center><h2>Wine Pairings</h2></center>
 <% if @recipe.wine_pairings != nil %>
