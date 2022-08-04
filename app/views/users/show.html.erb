@@ -171,7 +171,7 @@
       <div class="row">
       <% @recipes.each do |recipe| %>
         <div class="col-lg-4">
-          <div class="card-custom">
+          <div class="card-custom border border-dark">
             <img src="<%= recipe.image %>" class="card-img-top" alt="Recipe Photo"/>
             <div class="card-body">
               <p><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></p>
