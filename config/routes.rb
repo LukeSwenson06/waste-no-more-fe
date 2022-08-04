@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   delete '/items', to: 'items#destroy'
 
   resources :items, only: [:new, :create]
-  
+  get '/recipe_search', to: 'recipe_search#show'
+  get '/recipe_search/index', to: 'recipe_search#index'
+
   get '/foodbanks', to:'foodbanks#search'
   get '/foodbanks/index', to: 'foodbanks#index'
   get '/foodbanks/:id', to: 'foodbanks#show'
