@@ -1,26 +1,71 @@
-<div id='information'>
-    <div>
-        <p><%= @foodbank.name %></p><br><br>
-    </div>
+<style>
+    .card-custom {
+    background-color: MediumSeaGreen
+    }
+    .border-primary {
+    border-color: black
+    }
+    .fb-items {
+    background-color: lightgreen;
+    font-size: 20px
+    }
+    .header{
+        padding-top: 25px;
+    }
+    .border{
+        padding-top: 25px;
+        background-color: lightgreen
+    }
+    .img{
+        opacity: 0.85;
+    }
+    body, html {
+    height: 100%;
+    }
 
-    <div>
-        <p>Score: <%= @foodbank.rating %></p><br>
-    </div>
+    .bg {
+    /* The image used */
+    background-image: url("https://wallpaperaccess.com/full/3662969.jpg");
 
-    <div>
-        <p><%= @foodbank.snippet %></p><br>
-    </div>
+    /* Full height */
+    height: 100%;
 
-    <div>
-        <p><%= @foodbank.mission %></p><br>
-    </div>
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
-    <div>
-        <p>Score: <%= link_to "#{@foodbank.link}", "#{@foodbank.link}"%></p><br>
-    </div>
+</style>
+<div class="bg ">
+    <div class="img container">
+        <div id="information" class="card border-dark">
+            <center>
+                <div class="header card-custom text-black" style="--bs-bg-opacity: .5;">
+                    <h2><b><%= @foodbank.name %></b></h2><br>
+                </div>
+                <div class="fb-items header">
+                    <div>
+                        <p><b><%= @foodbank.snippet %></b></p><br>
+                    </div>
 
-    <div>
-        <p>Address: <%= @foodbank.city %>, <%= @foodbank.state %>, <%= @foodbank.street %>, <%= @foodbank.postalcode %></p><br>
+                    <div>
+                        <p><b><%= @foodbank.mission %></b></p><br>
+                    </div>
+
+                    <div>
+                        <p><b>Score:</b> <%= @foodbank.rating %></p><br>
+                    </div>
+
+                    <div>
+                        <p><b>Foodbank Website: <%= link_to "#{@foodbank.link}", "#{@foodbank.link}"%></b></p><br>
+                    </div>
+
+                    <div>
+                        <p><b>Address:</b> <%= @foodbank.city %>, <%= @foodbank.state %>, <%= @foodbank.street %>, <%= @foodbank.postalcode %></p><br>
+                    </div>
+                </div>
+            </center>
+        </div>
     </div>
 </div>
-
