@@ -12,6 +12,8 @@ RSpec.describe UserFacade do
   end
 
   it 'can find a users items' do
-    
+    auth_hash = {:info => {:name => "Tom", :email => "Tom@gmail.com"}}
+    UserFacade.create_user(auth_hash)
+    ItemFacade.create_item("Tom@gmail.co")
   end
 end
