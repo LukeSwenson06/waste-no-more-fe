@@ -1,0 +1,16 @@
+<%= form_with url: '/groceries', method: :post, local: true do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+    <%= f.submit 'Add Grocery' %>
+<% end %>
+
+<h1>Grocery List</h1><hr>
+
+<% @groceries.each do |grocery| %>
+    <h5><%= grocery.name %> <%= button_to "Remove #{grocery.name}", grocery_path(grocery.id), method: :delete %></h3><hr>
+<% end %>
+
+<% if @groceries.count >= 1%>
+    <%= button_to "Remove All", grocery_path(0), method: :delete %>
+<% end %>
+
