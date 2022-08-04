@@ -29,10 +29,10 @@
   <br>
 
 <center><h2>Wine Pairings</h2></center>
-<% if @recipe.wine_pairings != nil %>
+<% if @recipe.wine_pairings != nil && @recipe.wine_pairings != []%>
   <% @recipe.wine_pairings.each do |wine| %>
     <center><p><%= wine.titleize %></p></center>
   <% end %>
 <% else %>
-  <h2>There are no wine pairings for this recipe</h2>
+  <center><h2>There are no wine pairings for this recipe</h2></center>
 <% end %>
