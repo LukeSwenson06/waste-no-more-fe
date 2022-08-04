@@ -19,5 +19,12 @@ class RecipeService < BaseService
         JSON.parse(response.body, symbolize_names: true)
     end
 
+    def self.find_recipes_by_name_call(query)
+        response = spoonacular_connection.get("/recipes/complexSearch?query=#{query}") do |faraday|
+            faraday.params['apiKey'] = ENV['recipe_api_key']
+        end
+        JSON.parse(response.body, symbolize_names: true)
+    end
+
 
 end

@@ -5,6 +5,7 @@ RSpec.describe 'Add new item to fridge' do
         before :each do
             user = User.new({name: "Tom", email: "Tom@gmail.com"})
             allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+            allow_any_instance_of(ApplicationController).to receive(:active_session?).and_return(true)
             json = JSON.parse(File.read('./spec/fixtures/items_data.json'), symbolize_names: true) 
             items = json[:data].map do |item_data|
                 Item.new(item_data)

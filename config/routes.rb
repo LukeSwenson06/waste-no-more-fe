@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   resources :groceries, only: [:index, :create, :destroy]
   
+  get '/recipe_search', to: 'recipe_search#show'
+  get '/recipe_search/index', to: 'recipe_search#index'
+
   get '/foodbanks', to:'foodbanks#search'
   get '/foodbanks/index', to: 'foodbanks#index'
   get '/foodbanks/:id', to: 'foodbanks#show'

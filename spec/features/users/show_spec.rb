@@ -6,6 +6,8 @@ RSpec.describe 'User dashboard' do
     before :each do
       @user = User.new({name: "Tom", email: "Tom@gmail.com"})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      allow_any_instance_of(ApplicationController).to receive(:active_session?).and_return(true)
+      
 
       json = JSON.parse(File.read('./spec/fixtures/items_data.json'), symbolize_names: true) 
       items = json[:data].map do |item_data|
@@ -79,8 +81,8 @@ RSpec.describe 'User dashboard' do
       within "#Expiring" do
         expect(page).to have_content("Cheese")
         expect(page).to have_content("26/08/2022")
-        expect(page).to have_button("Delete Item")
-        click_button("Delete Item")
+        expect(page).to have_button("Delete Cheese")
+        click_button("Delete Cheese")
       end
     
       expect(current_path).to eq('/dashboard')
@@ -117,6 +119,7 @@ RSpec.describe 'User dashboard' do
     it 'only displays the welcome message if the user does not have any items', :vcr do
       user = User.new({name: "Bill", email: "Bill@gmail.com"})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:active_session?).and_return(true)
       allow(UserFacade).to receive(:user_items).and_return([])
       
       visit '/dashboard'
@@ -132,6 +135,7 @@ RSpec.describe 'User dashboard' do
       allow(Date).to receive(:today).and_return Date.new(2022, 8, 25)
       user = User.new({name: "Bill", email: "Bill@gmail.com"})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:active_session?).and_return(true)
       json = JSON.parse(File.read('./spec/fixtures/limited_items_data.json'), symbolize_names: true) 
       items = json[:data].map do |item_data|
         Item.new(item_data)
