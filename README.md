@@ -96,7 +96,7 @@ Oauth credentials
 </a>
 <p>🔥@amsalmeron Github:https://github.com/amsalmeron LinkedIn: https://linkedin.com/in/antonio-salmeron  </p>
 <p>🚀@caden-jarrett Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/caden-jarrett-0655051b6/</p>
-<p>🪂@DrewProebstel Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/drew-proebstel/ </p>
+<p>🪂@DrewProebstel Github: https://github.com/DrewPoebstel LinkedIn: https://www.linkedin.com/in/drew-proebstel/ </p>
 <p>🎊@LukeSwenson06 Github: https://github.com/LukeSwenson06 Linkedin: https://www.linkedin.com/in/luke-swenson </p>
 <p>✨@ross-ian28 Github:https://github.com/ross-ian28 Linkedin: https://www.linkedin.com/in/ross-ian28/ </p>
 <p>🎉@tjhaines-cap Github:https://github.com/tjhaines-cap LinkedIn: https://www.linkedin.com/in/thomas-haines-9b93451a0/ </p>
