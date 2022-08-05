@@ -24,14 +24,14 @@
  Partner Repo: https://github.com/LukeSwenson06/waste_no_more-be.git
  Heroku App: https://waste-no-more-fe.herokuapp.com/
 
-###Built With
+### Built With
 - ![Ruby On Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 - ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 - ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 - ![BootStrap](	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 - ![PostgresSql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-##Getting Started
+## Getting Started
 
 ### Installation
 1. Get your API key from these websites
@@ -55,7 +55,7 @@ Oauth credentials
 
 5. Run `Bundle Exec Figaro Install` to generate `application.yml` file
 
-6. In `application.yml` file, add api keys titled
+6. In `application.yml` file, add api keys
 - `recipe_api_key: YOUR_API_KEY`
 - `resource_api_key: YOUR_API_KEY`
 - `foodbank_app_key: YOUR_API_KEY`
@@ -81,6 +81,14 @@ Oauth credentials
 - Search for recipes by name or by ingredients that are not in your fridge.
 
 ## Application Images
+#### Landing Page
+![alt text](https://i.ibb.co/2n87F6x/Screen-Shot-2022-08-04-at-6-11-48-PM.png)
+
+#### User Fridge
+![alt text](https://i.ibb.co/ZV1wmY0/Screen-Shot-2022-08-04-at-6-12-16-PM.png)
+
+#### Foodbanks
+![alt text](https://i.ibb.co/H7kFhS0/Screen-Shot-2022-08-04-at-6-13-02-PM.png)
 
 ## Contributions
 <a href="https://github.com/LukeSwenson06/waste-no-more-fe/graphs/contributors">
@@ -88,7 +96,7 @@ Oauth credentials
 </a>
 <p>🔥@amsalmeron Github:https://github.com/amsalmeron LinkedIn: https://linkedin.com/in/antonio-salmeron  </p>
 <p>🚀@caden-jarrett Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/caden-jarrett-0655051b6/</p>
-<p>🏅@DrewProebstel Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/drew-proebstel/ </p>
+<p>🪂@DrewProebstel Github: https://github.com/caden-jarrett LinkedIn: https://www.linkedin.com/in/drew-proebstel/ </p>
 <p>🎊@LukeSwenson06 Github: https://github.com/LukeSwenson06 Linkedin: https://www.linkedin.com/in/luke-swenson </p>
 <p>✨@ross-ian28 Github:https://github.com/ross-ian28 Linkedin: https://www.linkedin.com/in/ross-ian28/ </p>
 <p>🎉@tjhaines-cap Github:https://github.com/tjhaines-cap LinkedIn: https://www.linkedin.com/in/thomas-haines-9b93451a0/ </p>
